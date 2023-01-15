@@ -24,7 +24,7 @@ export interface user {
   /** @gotags: dynamodbav:"updated,omitempty" */
   updated: string;
   /** @gotags: dynamodbav:"verified,omitempty" */
-  verified: string;
+  verified: boolean;
   /** @gotags: dynamodbav:"avatar,omitempty" */
   avatar: string;
   /** @gotags: dynamodbav:"lastResetSentAt,omitempty" */

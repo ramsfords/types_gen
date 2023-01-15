@@ -58,7 +58,7 @@ func (m *Ok) validate(all bool) error {
 
 	// no validation rules for Success
 
-	// no validation rules for StatusCode
+	// no validation rules for Code
 
 	// no validation rules for Message
 

@@ -26,7 +26,7 @@ type Ping struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"hi,omitempty"
-	Hi string `protobuf:"bytes,1,opt,name=hi,proto3" json:"hi,omitempty"`
+	Hi string `protobuf:"bytes,1,opt,name=hi,proto3" json:"hi,omitempty" dynamodbav:"hi,omitempty"`
 }
 
 func (x *Ping) Reset() {
@@ -74,9 +74,9 @@ type Id struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"id,omitempty"
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty" dynamodbav:"id,omitempty"`
 	// @gotags: dynamodbav:"business_id,omitempty"
-	BusinessId string `protobuf:"bytes,2,opt,name=businessId,proto3" json:"businessId,omitempty"`
+	BusinessId string `protobuf:"bytes,2,opt,name=businessId,proto3" json:"businessId,omitempty" dynamodbav:"business_id,omitempty"`
 }
 
 func (x *Id) Reset() {
@@ -131,7 +131,7 @@ type Ids struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"ids,omitempty"
-	Ids []*Id `protobuf:"bytes,1,rep,name=ids,proto3" json:"ids,omitempty"`
+	Ids []*Id `protobuf:"bytes,1,rep,name=ids,proto3" json:"ids,omitempty" dynamodbav:"ids,omitempty"`
 }
 
 func (x *Ids) Reset() {

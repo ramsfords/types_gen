@@ -27,23 +27,23 @@ type SignUp struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"first_name,omitempty"
-	FirstName string `protobuf:"bytes,1,opt,name=first_name,json=firstName,proto3" json:"first_name,omitempty"`
+	FirstName string `protobuf:"bytes,1,opt,name=first_name,json=firstName,proto3" json:"first_name,omitempty" dynamodbav:"first_name,omitempty"`
 	// @gotags: dynamodbav:"middle_name,omitempty"
-	MiddleName string `protobuf:"bytes,2,opt,name=middle_name,json=middleName,proto3" json:"middle_name,omitempty"`
+	MiddleName string `protobuf:"bytes,2,opt,name=middle_name,json=middleName,proto3" json:"middle_name,omitempty" dynamodbav:"middle_name,omitempty"`
 	// @gotags: dynamodbav:"last_name,omitempty"
-	LastName string `protobuf:"bytes,3,opt,name=last_name,json=lastName,proto3" json:"last_name,omitempty"`
+	LastName string `protobuf:"bytes,3,opt,name=last_name,json=lastName,proto3" json:"last_name,omitempty" dynamodbav:"last_name,omitempty"`
 	// @gotags: dynamodbav:"email,omitempty"
-	Email string `protobuf:"bytes,4,opt,name=email,proto3" json:"email,omitempty"`
+	Email string `protobuf:"bytes,4,opt,name=email,proto3" json:"email,omitempty" dynamodbav:"email,omitempty"`
 	// @gotags: dynamodbav:"password,omitempty"
-	Password string `protobuf:"bytes,5,opt,name=password,proto3" json:"password,omitempty"`
+	Password string `protobuf:"bytes,5,opt,name=password,proto3" json:"password,omitempty" dynamodbav:"password,omitempty"`
 	// @gotags: dynamodbav:"phone_number,omitempty"
-	PhoneNumber string `protobuf:"bytes,6,opt,name=phone_number,json=phoneNumber,proto3" json:"phone_number,omitempty"`
+	PhoneNumber string `protobuf:"bytes,6,opt,name=phone_number,json=phoneNumber,proto3" json:"phone_number,omitempty" dynamodbav:"phone_number,omitempty"`
 	// @gotags: dynamodbav:"role,omitempty"
-	Role []Role `protobuf:"varint,7,rep,packed,name=role,proto3,enum=v1.Role" json:"role,omitempty"`
+	Role []Role `protobuf:"varint,7,rep,packed,name=role,proto3,enum=v1.Role" json:"role,omitempty" dynamodbav:"role,omitempty"`
 	// @gotags: dynamodbav:"terms_aggrement,omitempty"
-	TermsAggrement bool `protobuf:"varint,8,opt,name=terms_aggrement,json=phone_number,proto3" json:"terms_aggrement,omitempty"`
+	TermsAggrement bool `protobuf:"varint,8,opt,name=terms_aggrement,json=phone_number,proto3" json:"terms_aggrement,omitempty" dynamodbav:"terms_aggrement,omitempty"`
 	// @gotags: dynamodbav:"company_name,omitempty"
-	CompanyName string `protobuf:"bytes,9,opt,name=company_name,proto3" json:"company_name,omitempty"`
+	CompanyName string `protobuf:"bytes,9,opt,name=company_name,proto3" json:"company_name,omitempty" dynamodbav:"company_name,omitempty"`
 }
 
 func (x *SignUp) Reset() {

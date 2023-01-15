@@ -26,21 +26,21 @@ type Reference struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"vendor_bol,omitempty"
-	VendorBol string `protobuf:"bytes,1,opt,name=vendor_bol,json=vendorBol,proto3" json:"vendor_bol,omitempty"`
+	VendorBol string `protobuf:"bytes,1,opt,name=vendor_bol,json=vendorBol,proto3" json:"vendor_bol,omitempty" dynamodbav:"vendor_bol,omitempty"`
 	// @gotags: dynamodbav:"bol,omitempty"
-	Bol string `protobuf:"bytes,2,opt,name=bol,proto3" json:"bol,omitempty"`
+	Bol string `protobuf:"bytes,2,opt,name=bol,proto3" json:"bol,omitempty" dynamodbav:"bol,omitempty"`
 	// @gotags: dynamodbav:"vendor_reference_id,omitempty"
-	VendorReferenceId string `protobuf:"bytes,3,opt,name=vendor_reference_id,json=vendorReferenceId,proto3" json:"vendor_reference_id,omitempty"`
+	VendorReferenceId string `protobuf:"bytes,3,opt,name=vendor_reference_id,json=vendorReferenceId,proto3" json:"vendor_reference_id,omitempty" dynamodbav:"vendor_reference_id,omitempty"`
 	// @gotags: dynamodbav:"pickup_no,omitempty"
-	PickupNo string `protobuf:"bytes,4,opt,name=pickup_no,json=pickupNo,proto3" json:"pickup_no,omitempty"`
+	PickupNo string `protobuf:"bytes,4,opt,name=pickup_no,json=pickupNo,proto3" json:"pickup_no,omitempty" dynamodbav:"pickup_no,omitempty"`
 	// @gotags: dynamodbav:"invoice_no,omitempty"
-	InvoiceNo string `protobuf:"bytes,5,opt,name=invoice_no,json=invoiceNo,proto3" json:"invoice_no,omitempty"`
+	InvoiceNo string `protobuf:"bytes,5,opt,name=invoice_no,json=invoiceNo,proto3" json:"invoice_no,omitempty" dynamodbav:"invoice_no,omitempty"`
 	// @gotags: dynamodbav:"vendor_invoice_no,omitempty"
-	VendorInvoiceNo string `protobuf:"bytes,6,opt,name=vendor_invoice_no,json=vendorInvoiceNo,proto3" json:"vendor_invoice_no,omitempty"`
+	VendorInvoiceNo string `protobuf:"bytes,6,opt,name=vendor_invoice_no,json=vendorInvoiceNo,proto3" json:"vendor_invoice_no,omitempty" dynamodbav:"vendor_invoice_no,omitempty"`
 	// @gotags: dynamodbav:"business_id,omitempty"
-	BusinessId string `protobuf:"bytes,7,opt,name=business_id,json=businessId,proto3" json:"business_id,omitempty"`
+	BusinessId string `protobuf:"bytes,7,opt,name=business_id,json=businessId,proto3" json:"business_id,omitempty" dynamodbav:"business_id,omitempty"`
 	// @gotags: dynamodbav:"type,omitempty"
-	Type string `protobuf:"bytes,8,opt,name=type,proto3" json:"type,omitempty"`
+	Type string `protobuf:"bytes,8,opt,name=type,proto3" json:"type,omitempty" dynamodbav:"type,omitempty"`
 }
 
 func (x *Reference) Reset() {

@@ -147,29 +147,29 @@ type ShipmentStatus struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"shipment_id,omitempty"
-	ShipmentId string `protobuf:"bytes,1,opt,name=shipment_id,json=shipmentId,proto3" json:"shipment_id,omitempty"`
+	ShipmentId string `protobuf:"bytes,1,opt,name=shipment_id,json=shipmentId,proto3" json:"shipment_id,omitempty" dynamodbav:"shipment_id,omitempty"`
 	// @gotags: dynamodbav:"reference_number,omitempty"
-	ReferenceNumber string `protobuf:"bytes,2,opt,name=reference_number,json=referenceNumber,proto3" json:"reference_number,omitempty"`
+	ReferenceNumber string `protobuf:"bytes,2,opt,name=reference_number,json=referenceNumber,proto3" json:"reference_number,omitempty" dynamodbav:"reference_number,omitempty"`
 	// @gotags: dynamodbav:"bol_number,omitempty"
-	BolNumber string `protobuf:"bytes,3,opt,name=bol_number,json=bolNumber,proto3" json:"bol_number,omitempty"`
+	BolNumber string `protobuf:"bytes,3,opt,name=bol_number,json=bolNumber,proto3" json:"bol_number,omitempty" dynamodbav:"bol_number,omitempty"`
 	// @gotags: dynamodbav:"date,omitempty"
-	Date string `protobuf:"bytes,4,opt,name=date,proto3" json:"date,omitempty"`
+	Date string `protobuf:"bytes,4,opt,name=date,proto3" json:"date,omitempty" dynamodbav:"date,omitempty"`
 	// @gotags: dynamodbav:"comment,omitempty"
-	Comment string `protobuf:"bytes,5,opt,name=comment,proto3" json:"comment,omitempty"`
+	Comment string `protobuf:"bytes,5,opt,name=comment,proto3" json:"comment,omitempty" dynamodbav:"comment,omitempty"`
 	// @gotags: dynamodbav:"status,omitempty"
-	Status ShipmentStatusOption `protobuf:"varint,6,opt,name=status,proto3,enum=v1.ShipmentStatusOption" json:"status,omitempty"`
+	Status ShipmentStatusOption `protobuf:"varint,6,opt,name=status,proto3,enum=v1.ShipmentStatusOption" json:"status,omitempty" dynamodbav:"status,omitempty"`
 	// @gotags: dynamodbav:"note,omitempty"
-	Note string `protobuf:"bytes,7,opt,name=note,proto3" json:"note,omitempty"`
+	Note string `protobuf:"bytes,7,opt,name=note,proto3" json:"note,omitempty" dynamodbav:"note,omitempty"`
 	// @gotags: dynamodbav:"current_location,omitempty"
-	CurrentLocation string `protobuf:"bytes,8,opt,name=current_location,json=currentLocation,proto3" json:"current_location,omitempty"`
+	CurrentLocation string `protobuf:"bytes,8,opt,name=current_location,json=currentLocation,proto3" json:"current_location,omitempty" dynamodbav:"current_location,omitempty"`
 	// @gotags: dynamodbav:"intervention_needed,omitempty"
-	InterventionNeeded bool `protobuf:"varint,9,opt,name=intervention_needed,json=interventionNeeded,proto3" json:"intervention_needed,omitempty"`
+	InterventionNeeded bool `protobuf:"varint,9,opt,name=intervention_needed,json=interventionNeeded,proto3" json:"intervention_needed,omitempty" dynamodbav:"intervention_needed,omitempty"`
 	// @gotags: dynamodbav:"business_id,omitempty"
-	BusinessId string `protobuf:"bytes,10,opt,name=business_id,json=businessId,proto3" json:"business_id,omitempty"`
+	BusinessId string `protobuf:"bytes,10,opt,name=business_id,json=businessId,proto3" json:"business_id,omitempty" dynamodbav:"business_id,omitempty"`
 	// @gotags: dynamodbav:"type,omitempty"
-	Type string `protobuf:"bytes,11,opt,name=type,proto3" json:"type,omitempty"`
+	Type string `protobuf:"bytes,11,opt,name=type,proto3" json:"type,omitempty" dynamodbav:"type,omitempty"`
 	// @gotags: dynamodbav:"quote_id,omitempty"
-	QuoteId string `protobuf:"bytes,12,opt,name=quote_id,json=quoteId,proto3" json:"quote_id,omitempty"`
+	QuoteId string `protobuf:"bytes,12,opt,name=quote_id,json=quoteId,proto3" json:"quote_id,omitempty" dynamodbav:"quote_id,omitempty"`
 }
 
 func (x *ShipmentStatus) Reset() {

@@ -26,7 +26,7 @@ type ValidateToken struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"token,omitempty"
-	Token string `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
+	Token string `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty" dynamodbav:"token,omitempty"`
 }
 
 func (x *ValidateToken) Reset() {

@@ -26,17 +26,17 @@ type SendEmail struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"email_subject,omitempty"
-	EmailSubject string `protobuf:"bytes,1,opt,name=email_subject,json=emailSubject,proto3" json:"email_subject,omitempty"`
+	EmailSubject string `protobuf:"bytes,1,opt,name=email_subject,json=emailSubject,proto3" json:"email_subject,omitempty" dynamodbav:"email_subject,omitempty"`
 	// @gotags: dynamodbav:"receiver_email,omitempty"
-	ReceiverEmailAddress string `protobuf:"bytes,2,opt,name=receiver_email_address,json=receiverEmailAddress,proto3" json:"receiver_email_address,omitempty"`
+	ReceiverEmailAddress string `protobuf:"bytes,2,opt,name=receiver_email_address,json=receiverEmailAddress,proto3" json:"receiver_email_address,omitempty" dynamodbav:"receiver_email,omitempty"`
 	// @gotags: dynamodbav:"receiver_name,omitempty"
-	ReceiverName string `protobuf:"bytes,3,opt,name=receiver_name,json=receiverName,proto3" json:"receiver_name,omitempty"`
+	ReceiverName string `protobuf:"bytes,3,opt,name=receiver_name,json=receiverName,proto3" json:"receiver_name,omitempty" dynamodbav:"receiver_name,omitempty"`
 	// @gotags: dynamodbav:"email_template,omitempty"
-	EmailPurpose EmailTemplate `protobuf:"varint,4,opt,name=email_purpose,json=emailPurpose,proto3,enum=v1.EmailTemplate" json:"email_purpose,omitempty"`
+	EmailPurpose EmailTemplate `protobuf:"varint,4,opt,name=email_purpose,json=emailPurpose,proto3,enum=v1.EmailTemplate" json:"email_purpose,omitempty" dynamodbav:"email_template,omitempty"`
 	// @gotags: dynamodbav:"token,omitempty"
-	Token string `protobuf:"bytes,5,opt,name=token,proto3" json:"token,omitempty"`
+	Token string `protobuf:"bytes,5,opt,name=token,proto3" json:"token,omitempty" dynamodbav:"token,omitempty"`
 	// @gotags: dynamodbav:"success,omitempty"
-	Success bool `protobuf:"varint,6,opt,name=success,proto3" json:"success,omitempty"`
+	Success bool `protobuf:"varint,6,opt,name=success,proto3" json:"success,omitempty" dynamodbav:"success,omitempty"`
 }
 
 func (x *SendEmail) Reset() {

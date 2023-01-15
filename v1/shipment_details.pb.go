@@ -29,31 +29,31 @@ type ShipmentDetails struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"quote_id,omitempty"
-	QuoteId string `protobuf:"bytes,1,opt,name=quote_id,json=quoteId,proto3" json:"quote_id,omitempty"`
+	QuoteId string `protobuf:"bytes,1,opt,name=quote_id,json=quoteId,proto3" json:"quote_id,omitempty" dynamodbav:"quote_id,omitempty"`
 	// @gotags: dynamodbav:"requester_id,omitempty"
-	RequesterId string `protobuf:"bytes,2,opt,name=requester_id,json=requesterId,proto3" json:"requester_id,omitempty"`
+	RequesterId string `protobuf:"bytes,2,opt,name=requester_id,json=requesterId,proto3" json:"requester_id,omitempty" dynamodbav:"requester_id,omitempty"`
 	// @gotags: dynamodbav:"mode,omitempty"
-	Mode string `protobuf:"bytes,3,opt,name=mode,proto3" json:"mode,omitempty"`
+	Mode string `protobuf:"bytes,3,opt,name=mode,proto3" json:"mode,omitempty" dynamodbav:"mode,omitempty"`
 	// @gotags: dynamodbav:"liable_party_id,omitempty"
-	LiablePartyId string `protobuf:"bytes,4,opt,name=liable_party_id,json=liablePartyId,proto3" json:"liable_party_id,omitempty"`
+	LiablePartyId string `protobuf:"bytes,4,opt,name=liable_party_id,json=liablePartyId,proto3" json:"liable_party_id,omitempty" dynamodbav:"liable_party_id,omitempty"`
 	// @gotags: dynamodbav:"pickup_date,omitempty"
-	PickupDate string `protobuf:"bytes,5,opt,name=pickup_date,json=pickup_date,omitempty,proto3" json:"pickup_date,omitempty"`
+	PickupDate string `protobuf:"bytes,5,opt,name=pickup_date,json=pickup_date,omitempty,proto3" json:"pickup_date,omitempty" dynamodbav:"pickup_date,omitempty"`
 	// @gotags: dynamodbav:"display_date,omitempty"
-	DisplayDate string `protobuf:"bytes,6,opt,name=display_date,json=displayDate,proto3" json:"display_date,omitempty"`
+	DisplayDate string `protobuf:"bytes,6,opt,name=display_date,json=displayDate,proto3" json:"display_date,omitempty" dynamodbav:"display_date,omitempty"`
 	// @gotags: dynamodbav:"delivery_date,omitempty"
-	DeliveryDate string `protobuf:"bytes,7,opt,name=delivery_date,json=deliveryDate,proto3" json:"delivery_date,omitempty"`
+	DeliveryDate string `protobuf:"bytes,7,opt,name=delivery_date,json=deliveryDate,proto3" json:"delivery_date,omitempty" dynamodbav:"delivery_date,omitempty"`
 	// @gotags: dynamodbav:"vendor_bids,omitempty"
-	TotalItems int32 `protobuf:"varint,8,opt,name=total_items,json=totalItems,proto3" json:"total_items,omitempty"`
+	TotalItems int32 `protobuf:"varint,8,opt,name=total_items,json=totalItems,proto3" json:"total_items,omitempty" dynamodbav:"vendor_bids,omitempty"`
 	// @gotags: dynamodbav:"total_weight,omitempty"
-	TotalWeight float32 `protobuf:"fixed32,9,opt,name=total_weight,json=totalWeight,proto3" json:"total_weight,omitempty"`
+	TotalWeight float32 `protobuf:"fixed32,9,opt,name=total_weight,json=totalWeight,proto3" json:"total_weight,omitempty" dynamodbav:"total_weight,omitempty"`
 	// @gotags: dynamodbav:"valid_until,omitempty"
-	ValidUntil string `protobuf:"bytes,10,opt,name=valid_until,json=validUntil,proto3" json:"valid_until,omitempty"`
+	ValidUntil string `protobuf:"bytes,10,opt,name=valid_until,json=validUntil,proto3" json:"valid_until,omitempty" dynamodbav:"valid_until,omitempty"`
 	// @gotags: dynamodbav:"edit_mode,omitempty"
-	EditMode bool `protobuf:"varint,11,opt,name=edit_mode,json=editMode,proto3" json:"edit_mode,omitempty"`
+	EditMode bool `protobuf:"varint,11,opt,name=edit_mode,json=editMode,proto3" json:"edit_mode,omitempty" dynamodbav:"edit_mode,omitempty"`
 	// @gotags: dynamodbav:"business_id,omitempty"
-	BusinessId string `protobuf:"bytes,12,opt,name=business_id,json=businessId,proto3" json:"business_id,omitempty"`
+	BusinessId string `protobuf:"bytes,12,opt,name=business_id,json=businessId,proto3" json:"business_id,omitempty" dynamodbav:"business_id,omitempty"`
 	// @gotags: dynamodbav:"type,omitempty"
-	Type string `protobuf:"bytes,13,opt,name=type,proto3" json:"type,omitempty"`
+	Type string `protobuf:"bytes,13,opt,name=type,proto3" json:"type,omitempty" dynamodbav:"type,omitempty"`
 }
 
 func (x *ShipmentDetails) Reset() {

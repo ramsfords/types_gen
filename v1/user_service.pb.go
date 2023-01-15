@@ -27,7 +27,7 @@ type UserServicePingData struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"hi"
-	Hi string `protobuf:"bytes,1,opt,name=hi,proto3" json:"hi,omitempty"`
+	Hi string `protobuf:"bytes,1,opt,name=hi,proto3" json:"hi,omitempty" dynamodbav:"hi"`
 }
 
 func (x *UserServicePingData) Reset() {

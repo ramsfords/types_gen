@@ -76,9 +76,9 @@ type PhoneNumberData struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"phone_number"
-	PhoneNumber string `protobuf:"bytes,1,opt,name=phone_number,json=phoneNumber,proto3" json:"phone_number,omitempty"`
+	PhoneNumber string `protobuf:"bytes,1,opt,name=phone_number,json=phoneNumber,proto3" json:"phone_number,omitempty" dynamodbav:"phone_number"`
 	// @gotags: dynamodbav:"phone_number_type"
-	Type PhoneNumberType `protobuf:"varint,2,opt,name=type,proto3,enum=v1.PhoneNumberType" json:"type,omitempty"`
+	Type PhoneNumberType `protobuf:"varint,2,opt,name=type,proto3,enum=v1.PhoneNumberType" json:"type,omitempty" dynamodbav:"phone_number_type"`
 }
 
 func (x *PhoneNumberData) Reset() {

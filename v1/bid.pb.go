@@ -27,39 +27,39 @@ type Bid struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"quote_id,omitempty"
-	QuoteId string `protobuf:"bytes,1,opt,name=quote_id,json=quote_id,omitempty,proto3" json:"quote_id,omitempty"`
+	QuoteId string `protobuf:"bytes,1,opt,name=quote_id,json=quote_id,omitempty,proto3" json:"quote_id,omitempty" dynamodbav:"quote_id,omitempty"`
 	// @gotags: dynamodbav:"bid_id,omitempty"
-	BidId string `protobuf:"bytes,2,opt,name=bid_id,json=bidId,proto3" json:"bid_id,omitempty"`
+	BidId string `protobuf:"bytes,2,opt,name=bid_id,json=bidId,proto3" json:"bid_id,omitempty" dynamodbav:"bid_id,omitempty"`
 	// @gotags: dynamodbav:"carrier,omitempty"
-	Carrier string `protobuf:"bytes,3,opt,name=carrier,proto3" json:"carrier,omitempty"`
+	Carrier string `protobuf:"bytes,3,opt,name=carrier,proto3" json:"carrier,omitempty" dynamodbav:"carrier,omitempty"`
 	// @gotags: dynamodbav:"amount,omitempty"
-	Amount *Amount `protobuf:"bytes,4,opt,name=amount,proto3" json:"amount,omitempty"`
+	Amount *Amount `protobuf:"bytes,4,opt,name=amount,proto3" json:"amount,omitempty" dynamodbav:"amount,omitempty"`
 	// @gotags: dynamodbav:"transit_time,omitempty"
-	TransitTime string `protobuf:"bytes,5,opt,name=transit_time,json=transitTime,proto3" json:"transit_time,omitempty"`
+	TransitTime string `protobuf:"bytes,5,opt,name=transit_time,json=transitTime,proto3" json:"transit_time,omitempty" dynamodbav:"transit_time,omitempty"`
 	// @gotags: dynamodbav:"guranteed,omitempty"
-	Guranteed bool `protobuf:"varint,6,opt,name=guranteed,proto3" json:"guranteed,omitempty"`
+	Guranteed bool `protobuf:"varint,6,opt,name=guranteed,proto3" json:"guranteed,omitempty" dynamodbav:"guranteed,omitempty"`
 	// @gotags: dynamodbav:"business_id,omitempty"
-	BusinessId string `protobuf:"bytes,7,opt,name=business_id,json=businessId,proto3" json:"business_id,omitempty"`
+	BusinessId string `protobuf:"bytes,7,opt,name=business_id,json=businessId,proto3" json:"business_id,omitempty" dynamodbav:"business_id,omitempty"`
 	// @gotags: dynamodbav:"company_large_logo_url,omitempty"
-	CompanyLargeLogoUrl string `protobuf:"bytes,8,opt,name=company_large_logo_url,json=companyLargeLogoUrl,proto3" json:"company_large_logo_url,omitempty"`
+	CompanyLargeLogoUrl string `protobuf:"bytes,8,opt,name=company_large_logo_url,json=companyLargeLogoUrl,proto3" json:"company_large_logo_url,omitempty" dynamodbav:"company_large_logo_url,omitempty"`
 	// @gotags: dynamodbav:"company_small_logo_url,omitempty"
-	CompanySmallLogoUrl string `protobuf:"bytes,9,opt,name=company_small_logo_url,json=companySmallLogoUrl,proto3" json:"company_small_logo_url,omitempty"`
+	CompanySmallLogoUrl string `protobuf:"bytes,9,opt,name=company_small_logo_url,json=companySmallLogoUrl,proto3" json:"company_small_logo_url,omitempty" dynamodbav:"company_small_logo_url,omitempty"`
 	// @gotags: dynamodbav:"delivery_date,omitempty"
-	DeliveryDate string `protobuf:"bytes,10,opt,name=delivery_date,json=deliveryDate,proto3" json:"delivery_date,omitempty"`
+	DeliveryDate string `protobuf:"bytes,10,opt,name=delivery_date,json=deliveryDate,proto3" json:"delivery_date,omitempty" dynamodbav:"delivery_date,omitempty"`
 	// @gotags: dynamodbav:"vendor_quote_id,omitempty"
-	VendorQuoteId string `protobuf:"bytes,11,opt,name=vendor_quote_id,json=vendorQuoteId,proto3" json:"vendor_quote_id,omitempty"`
+	VendorQuoteId string `protobuf:"bytes,11,opt,name=vendor_quote_id,json=vendorQuoteId,proto3" json:"vendor_quote_id,omitempty" dynamodbav:"vendor_quote_id,omitempty"`
 	// @gotags: dynamodbav:"capacity_provider_quote_id,omitempty"
-	CapacityProviderQuoteId string `protobuf:"bytes,12,opt,name=capacity_provider_quote_id,json=capacityProviderQuoteId,proto3" json:"capacity_provider_quote_id,omitempty"`
+	CapacityProviderQuoteId string `protobuf:"bytes,12,opt,name=capacity_provider_quote_id,json=capacityProviderQuoteId,proto3" json:"capacity_provider_quote_id,omitempty" dynamodbav:"capacity_provider_quote_id,omitempty"`
 	// @gotags: dynamodbav:"vendor_name,omitempty"
-	VendorName string `protobuf:"bytes,13,opt,name=vendor_name,json=vendorName,proto3" json:"vendor_name,omitempty"`
+	VendorName string `protobuf:"bytes,13,opt,name=vendor_name,json=vendorName,proto3" json:"vendor_name,omitempty" dynamodbav:"vendor_name,omitempty"`
 	// @gotags: dynamodbav:"carrier_name,omitempty"
-	CarrierName string `protobuf:"bytes,14,opt,name=carrier_name,json=carrierName,proto3" json:"carrier_name,omitempty"`
+	CarrierName string `protobuf:"bytes,14,opt,name=carrier_name,json=carrierName,proto3" json:"carrier_name,omitempty" dynamodbav:"carrier_name,omitempty"`
 	// @gotags: dynamodbav:"carrier_code,omitempty"
-	CarrierCode string `protobuf:"bytes,15,opt,name=carrier_code,json=carrierCode,proto3" json:"carrier_code,omitempty"`
+	CarrierCode string `protobuf:"bytes,15,opt,name=carrier_code,json=carrierCode,proto3" json:"carrier_code,omitempty" dynamodbav:"carrier_code,omitempty"`
 	// @gotags: dynamodbav:"type,omitempty"
-	Type string `protobuf:"bytes,16,opt,name=type,proto3" json:"type,omitempty"`
+	Type string `protobuf:"bytes,16,opt,name=type,proto3" json:"type,omitempty" dynamodbav:"type,omitempty"`
 	// @gotags: dynamodbav:"carrier_quote_id,omitempty"
-	CarrierQuoteId string `protobuf:"bytes,17,opt,name=carrier_quote_id,json=carrierQuoteId,proto3" json:"carrier_quote_id,omitempty"`
+	CarrierQuoteId string `protobuf:"bytes,17,opt,name=carrier_quote_id,json=carrierQuoteId,proto3" json:"carrier_quote_id,omitempty" dynamodbav:"carrier_quote_id,omitempty"`
 }
 
 func (x *Bid) Reset() {
@@ -219,7 +219,7 @@ type Bids struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"bids,omitempty"
-	Bids []*Bid `protobuf:"bytes,1,rep,name=bids,proto3" json:"bids,omitempty"`
+	Bids []*Bid `protobuf:"bytes,1,rep,name=bids,proto3" json:"bids,omitempty" dynamodbav:"bids,omitempty"`
 }
 
 func (x *Bids) Reset() {

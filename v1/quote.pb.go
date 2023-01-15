@@ -27,27 +27,27 @@ type QuoteRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"shipment_details,omitempty"
-	ShipmentDetails *ShipmentDetails `protobuf:"bytes,1,opt,name=shipment_details,json=shipmentDetails,proto3" json:"shipment_details,omitempty"`
+	ShipmentDetails *ShipmentDetails `protobuf:"bytes,1,opt,name=shipment_details,json=shipmentDetails,proto3" json:"shipment_details,omitempty" dynamodbav:"shipment_details,omitempty"`
 	// @gotags: dynamodbav:"commodities,omitempty"
-	Commodities []*Commodity `protobuf:"bytes,2,rep,name=commodities,proto3" json:"commodities,omitempty"`
+	Commodities []*Commodity `protobuf:"bytes,2,rep,name=commodities,proto3" json:"commodities,omitempty" dynamodbav:"commodities,omitempty"`
 	// @gotags: dynamodbav:"pickup,omitempty"
-	Pickup *Location `protobuf:"bytes,3,opt,name=pickup,proto3" json:"pickup,omitempty"`
+	Pickup *Location `protobuf:"bytes,3,opt,name=pickup,proto3" json:"pickup,omitempty" dynamodbav:"pickup,omitempty"`
 	// @gotags: dynamodbav:"delivery,omitempty"
-	Delivery *Location `protobuf:"bytes,4,opt,name=delivery,proto3" json:"delivery,omitempty"`
+	Delivery *Location `protobuf:"bytes,4,opt,name=delivery,proto3" json:"delivery,omitempty" dynamodbav:"delivery,omitempty"`
 	// @gotags: dynamodbav:"bid,omitempty"
-	Bid *Bid `protobuf:"bytes,5,opt,name=bid,proto3" json:"bid,omitempty"`
+	Bid *Bid `protobuf:"bytes,5,opt,name=bid,proto3" json:"bid,omitempty" dynamodbav:"bid,omitempty"`
 	// @gotags: dynamodbav:"bids,omitempty"
-	Bids []*Bid `protobuf:"bytes,6,rep,name=bids,proto3" json:"bids,omitempty"`
+	Bids []*Bid `protobuf:"bytes,6,rep,name=bids,proto3" json:"bids,omitempty" dynamodbav:"bids,omitempty"`
 	// @gotags: dynamodbav:"business_id,omitempty"
-	BusinessId string `protobuf:"bytes,7,opt,name=business_id,json=businessId,proto3" json:"business_id,omitempty"`
+	BusinessId string `protobuf:"bytes,7,opt,name=business_id,json=businessId,proto3" json:"business_id,omitempty" dynamodbav:"business_id,omitempty"`
 	// @gotags: dynamodbav:"type,omitempty"
-	Type string `protobuf:"bytes,8,opt,name=type,proto3" json:"type,omitempty"`
+	Type string `protobuf:"bytes,8,opt,name=type,proto3" json:"type,omitempty" dynamodbav:"type,omitempty"`
 	// @gotags: dynamodbav:"quote_id,omitempty"
-	QuoteId string `protobuf:"bytes,9,opt,name=quote_id,json=quoteId,proto3" json:"quote_id,omitempty"`
+	QuoteId string `protobuf:"bytes,9,opt,name=quote_id,json=quoteId,proto3" json:"quote_id,omitempty" dynamodbav:"quote_id,omitempty"`
 	// @gotags: dynamodbav:"booking_success,omitempty"
-	BookingSuccess bool `protobuf:"varint,10,opt,name=booking_success,json=bookingSuccess,proto3" json:"booking_success,omitempty"`
+	BookingSuccess bool `protobuf:"varint,10,opt,name=booking_success,json=bookingSuccess,proto3" json:"booking_success,omitempty" dynamodbav:"booking_success,omitempty"`
 	// @gotags: dynamodbav:"special_instruction,omitempty"
-	SpecialInstruction string `protobuf:"bytes,11,opt,name=special_instruction,json=specialInstruction,proto3" json:"special_instruction,omitempty"`
+	SpecialInstruction string `protobuf:"bytes,11,opt,name=special_instruction,json=specialInstruction,proto3" json:"special_instruction,omitempty" dynamodbav:"special_instruction,omitempty"`
 }
 
 func (x *QuoteRequest) Reset() {
@@ -165,7 +165,7 @@ type QuotesResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"quote_request,omitempty"
-	QuoteRequests []*QuoteRequest `protobuf:"bytes,1,rep,name=quote_requests,json=quoteRequests,proto3" json:"quote_requests,omitempty"`
+	QuoteRequests []*QuoteRequest `protobuf:"bytes,1,rep,name=quote_requests,json=quoteRequests,proto3" json:"quote_requests,omitempty" dynamodbav:"quote_request,omitempty"`
 }
 
 func (x *QuotesResponse) Reset() {

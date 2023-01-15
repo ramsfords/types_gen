@@ -26,17 +26,17 @@ type RestaurantAddress struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"street1"
-	Street1 string `protobuf:"bytes,1,opt,name=street1,proto3" json:"street1,omitempty"`
+	Street1 string `protobuf:"bytes,1,opt,name=street1,proto3" json:"street1,omitempty" dynamodbav:"street1"`
 	// @gotags: dynamodbav:"city"
-	City string `protobuf:"bytes,2,opt,name=city,proto3" json:"city,omitempty"`
+	City string `protobuf:"bytes,2,opt,name=city,proto3" json:"city,omitempty" dynamodbav:"city"`
 	// @gotags: dynamodbav:"state"
-	State string `protobuf:"bytes,3,opt,name=state,proto3" json:"state,omitempty"`
+	State string `protobuf:"bytes,3,opt,name=state,proto3" json:"state,omitempty" dynamodbav:"state"`
 	// @gotags: dynamodbav:"country"
-	Country string `protobuf:"bytes,4,opt,name=country,proto3" json:"country,omitempty"`
+	Country string `protobuf:"bytes,4,opt,name=country,proto3" json:"country,omitempty" dynamodbav:"country"`
 	// @gotags: dynamodbav:"zipCode"
-	ZipCode string `protobuf:"bytes,5,opt,name=zipCode,proto3" json:"zipCode,omitempty"`
+	ZipCode string `protobuf:"bytes,5,opt,name=zipCode,proto3" json:"zipCode,omitempty" dynamodbav:"zipCode"`
 	// @gotags: dynamodbav:"type"
-	Type string `protobuf:"bytes,6,opt,name=type,proto3" json:"type,omitempty"`
+	Type string `protobuf:"bytes,6,opt,name=type,proto3" json:"type,omitempty" dynamodbav:"type"`
 }
 
 func (x *RestaurantAddress) Reset() {
@@ -119,11 +119,11 @@ type OpenWindow struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"from"
-	From string `protobuf:"bytes,1,opt,name=from,proto3" json:"from,omitempty"`
+	From string `protobuf:"bytes,1,opt,name=from,proto3" json:"from,omitempty" dynamodbav:"from"`
 	// @gotags: dynamodbav:"to"
-	To string `protobuf:"bytes,2,opt,name=to,proto3" json:"to,omitempty"`
+	To string `protobuf:"bytes,2,opt,name=to,proto3" json:"to,omitempty" dynamodbav:"to"`
 	// @gotags: dynamodbav:"type"
-	Type string `protobuf:"bytes,3,opt,name=type,proto3" json:"type,omitempty"`
+	Type string `protobuf:"bytes,3,opt,name=type,proto3" json:"type,omitempty" dynamodbav:"type"`
 }
 
 func (x *OpenWindow) Reset() {
@@ -185,7 +185,7 @@ type Hours struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"openHours"
-	OpenHours []*OpenWindow `protobuf:"bytes,1,rep,name=openHours,proto3" json:"openHours,omitempty"`
+	OpenHours []*OpenWindow `protobuf:"bytes,1,rep,name=openHours,proto3" json:"openHours,omitempty" dynamodbav:"openHours"`
 }
 
 func (x *Hours) Reset() {
@@ -233,53 +233,53 @@ type CreateRestaurantData struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"id"
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty" dynamodbav:"id"`
 	// @gotags: dynamodbav:"name"
-	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty" dynamodbav:"name"`
 	// @gotags: dynamodbav:"restaurantName"
-	RestaurantName string `protobuf:"bytes,3,opt,name=restaurantName,proto3" json:"restaurantName,omitempty"`
+	RestaurantName string `protobuf:"bytes,3,opt,name=restaurantName,proto3" json:"restaurantName,omitempty" dynamodbav:"restaurantName"`
 	// @gotags: dynamodbav:"restaurantWebUrl"
-	RestaurantWebUrl string `protobuf:"bytes,4,opt,name=restaurantWebUrl,proto3" json:"restaurantWebUrl,omitempty"`
+	RestaurantWebUrl string `protobuf:"bytes,4,opt,name=restaurantWebUrl,proto3" json:"restaurantWebUrl,omitempty" dynamodbav:"restaurantWebUrl"`
 	// @gotags: dynamodbav:"restaurantS3DevUrl"
-	RestaurantS3DevUrl string `protobuf:"bytes,5,opt,name=restaurantS3DevUrl,proto3" json:"restaurantS3DevUrl,omitempty"`
+	RestaurantS3DevUrl string `protobuf:"bytes,5,opt,name=restaurantS3DevUrl,proto3" json:"restaurantS3DevUrl,omitempty" dynamodbav:"restaurantS3DevUrl"`
 	// @gotags: dynamodbav:"restaurantS3StaticProdUrl"
-	RestaurantS3StaticProdUrl string `protobuf:"bytes,6,opt,name=restaurantS3StaticProdUrl,proto3" json:"restaurantS3StaticProdUrl,omitempty"`
+	RestaurantS3StaticProdUrl string `protobuf:"bytes,6,opt,name=restaurantS3StaticProdUrl,proto3" json:"restaurantS3StaticProdUrl,omitempty" dynamodbav:"restaurantS3StaticProdUrl"`
 	// @gotags: dynamodbav:"address"
-	Address *RestaurantAddress `protobuf:"bytes,7,opt,name=address,proto3" json:"address,omitempty"`
+	Address *RestaurantAddress `protobuf:"bytes,7,opt,name=address,proto3" json:"address,omitempty" dynamodbav:"address"`
 	// @gotags: dynamodbav:"phoneNumber"
-	PhoneNumber string `protobuf:"bytes,8,opt,name=phoneNumber,proto3" json:"phoneNumber,omitempty"`
+	PhoneNumber string `protobuf:"bytes,8,opt,name=phoneNumber,proto3" json:"phoneNumber,omitempty" dynamodbav:"phoneNumber"`
 	// @gotags: dynamodbav:"email"
-	Email string `protobuf:"bytes,9,opt,name=email,proto3" json:"email,omitempty"`
+	Email string `protobuf:"bytes,9,opt,name=email,proto3" json:"email,omitempty" dynamodbav:"email"`
 	// @gotags: dynamodbav:"ownerId"
-	OwnerId string `protobuf:"bytes,10,opt,name=ownerId,proto3" json:"ownerId,omitempty"`
+	OwnerId string `protobuf:"bytes,10,opt,name=ownerId,proto3" json:"ownerId,omitempty" dynamodbav:"ownerId"`
 	// @gotags: dynamodbav:"openHours"
-	OpenHours map[string]*Hours `protobuf:"bytes,11,rep,name=openHours,proto3" json:"openHours,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	OpenHours map[string]*Hours `protobuf:"bytes,11,rep,name=openHours,proto3" json:"openHours,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3" dynamodbav:"openHours"`
 	// @gotags: dynamodbav:"created"
-	Created string `protobuf:"bytes,12,opt,name=created,proto3" json:"created,omitempty"`
+	Created string `protobuf:"bytes,12,opt,name=created,proto3" json:"created,omitempty" dynamodbav:"created"`
 	// @gotags: dynamodbav:"updated"
-	Updated string `protobuf:"bytes,13,opt,name=updated,proto3" json:"updated,omitempty"`
+	Updated string `protobuf:"bytes,13,opt,name=updated,proto3" json:"updated,omitempty" dynamodbav:"updated"`
 	// @gotags: dynamodbav:"type"
-	Type string `protobuf:"bytes,14,opt,name=type,proto3" json:"type,omitempty"`
+	Type string `protobuf:"bytes,14,opt,name=type,proto3" json:"type,omitempty" dynamodbav:"type"`
 	// @gotags: dynamodbav:"pk"
-	Pk string `protobuf:"bytes,15,opt,name=pk,proto3" json:"pk,omitempty"`
+	Pk string `protobuf:"bytes,15,opt,name=pk,proto3" json:"pk,omitempty" dynamodbav:"pk"`
 	// @gotags: dynamodbav:"sk"
-	Sk string `protobuf:"bytes,16,opt,name=sk,proto3" json:"sk,omitempty"`
+	Sk string `protobuf:"bytes,16,opt,name=sk,proto3" json:"sk,omitempty" dynamodbav:"sk"`
 	// @gotags: dynamodbav:"googleMapViewportUrl"
-	GoogleMapViewportUrl string `protobuf:"bytes,17,opt,name=googleMapViewportUrl,proto3" json:"googleMapViewportUrl,omitempty"`
+	GoogleMapViewportUrl string `protobuf:"bytes,17,opt,name=googleMapViewportUrl,proto3" json:"googleMapViewportUrl,omitempty" dynamodbav:"googleMapViewportUrl"`
 	// @gotags: dynamodbav:"s3StaticImagesUrl"
-	S3StaticImagesUrl string `protobuf:"bytes,18,opt,name=s3StaticImagesUrl,proto3" json:"s3StaticImagesUrl,omitempty"`
+	S3StaticImagesUrl string `protobuf:"bytes,18,opt,name=s3StaticImagesUrl,proto3" json:"s3StaticImagesUrl,omitempty" dynamodbav:"s3StaticImagesUrl"`
 	// @gotags: dynamodbav:"authEmail"
-	AuthEmail string `protobuf:"bytes,19,opt,name=authEmail,proto3" json:"authEmail,omitempty"`
+	AuthEmail string `protobuf:"bytes,19,opt,name=authEmail,proto3" json:"authEmail,omitempty" dynamodbav:"authEmail"`
 	// @gotags: dynamodbav:"userName"
-	UserName string `protobuf:"bytes,20,opt,name=userName,proto3" json:"userName,omitempty"`
+	UserName string `protobuf:"bytes,20,opt,name=userName,proto3" json:"userName,omitempty" dynamodbav:"userName"`
 	// @gotags: dynamodbav:"origin"
-	Origin string `protobuf:"bytes,21,opt,name=origin,proto3" json:"origin,omitempty"`
+	Origin string `protobuf:"bytes,21,opt,name=origin,proto3" json:"origin,omitempty" dynamodbav:"origin"`
 	// @gotags: dynamodbav:"role"
-	Role []Role `protobuf:"varint,22,rep,packed,name=role,proto3,enum=v1.Role" json:"role,omitempty"`
+	Role []Role `protobuf:"varint,22,rep,packed,name=role,proto3,enum=v1.Role" json:"role,omitempty" dynamodbav:"role"`
 	// @gotags: dynamodbav:"tokenKey"
-	TokenKey string `protobuf:"bytes,23,opt,name=tokenKey,proto3" json:"tokenKey,omitempty"`
+	TokenKey string `protobuf:"bytes,23,opt,name=tokenKey,proto3" json:"tokenKey,omitempty" dynamodbav:"tokenKey"`
 	// @gotags: dynamodbav:"restaurantIds"
-	RestaurantIds string `protobuf:"bytes,24,opt,name=restaurantIds,proto3" json:"restaurantIds,omitempty"`
+	RestaurantIds string `protobuf:"bytes,24,opt,name=restaurantIds,proto3" json:"restaurantIds,omitempty" dynamodbav:"restaurantIds"`
 }
 
 func (x *CreateRestaurantData) Reset() {
@@ -488,9 +488,9 @@ type RestaurantResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"message"
-	Message string `protobuf:"bytes,1,opt,name=message,proto3" json:"message,omitempty"`
+	Message string `protobuf:"bytes,1,opt,name=message,proto3" json:"message,omitempty" dynamodbav:"message"`
 	// @gotags: dynamodbav:"id"
-	Id string `protobuf:"bytes,2,opt,name=id,proto3" json:"id,omitempty"`
+	Id string `protobuf:"bytes,2,opt,name=id,proto3" json:"id,omitempty" dynamodbav:"id"`
 }
 
 func (x *RestaurantResponse) Reset() {

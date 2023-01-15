@@ -26,9 +26,9 @@ type Status struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"is_locked,omitempty"
-	IsLocked bool `protobuf:"varint,1,opt,name=is_locked,json=isLocked,proto3" json:"is_locked,omitempty"`
+	IsLocked bool `protobuf:"varint,1,opt,name=is_locked,json=isLocked,proto3" json:"is_locked,omitempty" dynamodbav:"is_locked,omitempty"`
 	// @gotags: dynamodbav:"since,omitempty"
-	Since string `protobuf:"bytes,2,opt,name=since,proto3" json:"since,omitempty"`
+	Since string `protobuf:"bytes,2,opt,name=since,proto3" json:"since,omitempty" dynamodbav:"since,omitempty"`
 }
 
 func (x *Status) Reset() {

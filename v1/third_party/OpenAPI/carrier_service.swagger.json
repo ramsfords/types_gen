@@ -836,10 +836,10 @@
           "type": "boolean",
           "title": "@gotags: dynamodbav:\"success,omitempty\""
         },
-        "statusCode": {
+        "code": {
           "type": "integer",
           "format": "int32",
-          "title": "@gotags: dynamodbav:\"status_code,omitempty\""
+          "title": "@gotags: dynamodbav:\"code,omitempty\""
         },
         "message": {
           "type": "string",

@@ -27,7 +27,7 @@ type LogOut struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"user_id,omitempty"
-	UserId string `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	UserId string `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty" dynamodbav:"user_id,omitempty"`
 }
 
 func (x *LogOut) Reset() {

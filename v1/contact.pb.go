@@ -26,25 +26,25 @@ type Contact struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"first_name,omitempty"
-	FirstName string `protobuf:"bytes,1,opt,name=first_name,json=firstName,proto3" json:"first_name,omitempty"`
+	FirstName string `protobuf:"bytes,1,opt,name=first_name,json=firstName,proto3" json:"first_name,omitempty" dynamodbav:"first_name,omitempty"`
 	// @gotags: dynamodbav:"last_name,omitempty"
-	LastName string `protobuf:"bytes,2,opt,name=last_name,json=lastName,proto3" json:"last_name,omitempty"`
+	LastName string `protobuf:"bytes,2,opt,name=last_name,json=lastName,proto3" json:"last_name,omitempty" dynamodbav:"last_name,omitempty"`
 	// @gotags: dynamodbav:"phone_number,omitempty"
-	PhoneNumber string `protobuf:"bytes,3,opt,name=phone_number,json=phoneNumber,proto3" json:"phone_number,omitempty"`
+	PhoneNumber string `protobuf:"bytes,3,opt,name=phone_number,json=phoneNumber,proto3" json:"phone_number,omitempty" dynamodbav:"phone_number,omitempty"`
 	// @gotags: dynamodbav:"phone_number_extension,omitempty"
-	PhoneNumberExtension string `protobuf:"bytes,4,opt,name=phone_number_extension,json=phoneNumberExtension,proto3" json:"phone_number_extension,omitempty"`
+	PhoneNumberExtension string `protobuf:"bytes,4,opt,name=phone_number_extension,json=phoneNumberExtension,proto3" json:"phone_number_extension,omitempty" dynamodbav:"phone_number_extension,omitempty"`
 	// @gotags: dynamodbav:"email_address,omitempty"
-	EmailAddress string `protobuf:"bytes,5,opt,name=email_address,json=emailAddress,proto3" json:"email_address,omitempty"`
+	EmailAddress string `protobuf:"bytes,5,opt,name=email_address,json=emailAddress,proto3" json:"email_address,omitempty" dynamodbav:"email_address,omitempty"`
 	// @gotags: dynamodbav:"phone_number_display,omitempty"
-	PhoneNumberDisplay string `protobuf:"bytes,6,opt,name=phone_number_display,json=phoneNumberDisplay,proto3" json:"phone_number_display,omitempty"`
+	PhoneNumberDisplay string `protobuf:"bytes,6,opt,name=phone_number_display,json=phoneNumberDisplay,proto3" json:"phone_number_display,omitempty" dynamodbav:"phone_number_display,omitempty"`
 	// @gotags: dynamodbav:"roles,omitempty"
-	Roles []Role `protobuf:"varint,7,rep,packed,name=roles,proto3,enum=v1.Role" json:"roles,omitempty"`
+	Roles []Role `protobuf:"varint,7,rep,packed,name=roles,proto3,enum=v1.Role" json:"roles,omitempty" dynamodbav:"roles,omitempty"`
 	// @gotags: dynamodbav:"preffered_contact_method,omitempty"
-	PrefferedContactMethod string `protobuf:"bytes,8,opt,name=preffered_contact_method,json=prefferedContactMethod,proto3" json:"preffered_contact_method,omitempty"`
+	PrefferedContactMethod string `protobuf:"bytes,8,opt,name=preffered_contact_method,json=prefferedContactMethod,proto3" json:"preffered_contact_method,omitempty" dynamodbav:"preffered_contact_method,omitempty"`
 	// @gotags: dynamodbav:"business_id,omitempty"
-	BusinessId string `protobuf:"bytes,9,opt,name=business_id,json=businessId,proto3" json:"business_id,omitempty"`
+	BusinessId string `protobuf:"bytes,9,opt,name=business_id,json=businessId,proto3" json:"business_id,omitempty" dynamodbav:"business_id,omitempty"`
 	// @gotags: dynamodbav:"type,omitempty"
-	Type string `protobuf:"bytes,10,opt,name=type,proto3" json:"type,omitempty"`
+	Type string `protobuf:"bytes,10,opt,name=type,proto3" json:"type,omitempty" dynamodbav:"type,omitempty"`
 }
 
 func (x *Contact) Reset() {

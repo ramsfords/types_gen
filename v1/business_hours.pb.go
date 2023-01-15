@@ -26,9 +26,9 @@ type BusinessHours struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"start,omitempty"
-	Start string `protobuf:"bytes,1,opt,name=start,proto3" json:"start,omitempty"`
+	Start string `protobuf:"bytes,1,opt,name=start,proto3" json:"start,omitempty" dynamodbav:"start,omitempty"`
 	// @gotags: dynamodbav:"end,omitempty"
-	End string `protobuf:"bytes,2,opt,name=end,proto3" json:"end,omitempty"`
+	End string `protobuf:"bytes,2,opt,name=end,proto3" json:"end,omitempty" dynamodbav:"end,omitempty"`
 }
 
 func (x *BusinessHours) Reset() {

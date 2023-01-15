@@ -88,6 +88,8 @@ func (m *User) validate(all bool) error {
 
 	// no validation rules for TokenKey
 
+	// no validation rules for Token
+
 	// no validation rules for Email
 
 	if len(errors) > 0 {

@@ -35,6 +35,8 @@ export interface user {
   passwordHash: string;
   /** @gotags: dynamodbav:"tokenKey,omitempty" */
   tokenKey: string;
+  /** @gotags: dynamodbav:"email,omitempty" */
+  email: string;
 }
 
 export interface LoginUser {

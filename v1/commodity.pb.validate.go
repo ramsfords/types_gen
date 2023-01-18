@@ -67,9 +67,9 @@ func (m *Commodity) validate(all bool) error {
 
 	// no validation rules for Weight
 
-	// no validation rules for DimensionUom
+	// no validation rules for DimensionUOM
 
-	// no validation rules for WeightUom
+	// no validation rules for WeightUOM
 
 	// no validation rules for DimensionDisplay
 
@@ -94,10 +94,6 @@ func (m *Commodity) validate(all bool) error {
 	// no validation rules for Index
 
 	// no validation rules for ShipmentDescription
-
-	// no validation rules for Type
-
-	// no validation rules for QuoteId
 
 	if len(errors) > 0 {
 		return CommodityMultiError(errors)

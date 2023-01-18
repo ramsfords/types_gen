@@ -56,8 +56,6 @@ func (m *Bid) validate(all bool) error {
 
 	var errors []error
 
-	// no validation rules for QuoteId
-
 	// no validation rules for BidId
 
 	// no validation rules for Carrier
@@ -95,11 +93,7 @@ func (m *Bid) validate(all bool) error {
 
 	// no validation rules for Guranteed
 
-	// no validation rules for BusinessId
-
-	// no validation rules for CompanyLargeLogoUrl
-
-	// no validation rules for CompanySmallLogoUrl
+	// no validation rules for VendorLogo
 
 	// no validation rules for DeliveryDate
 

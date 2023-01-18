@@ -57,34 +57,31 @@ func (m *QuoteRequest) validate(all bool) error {
 
 	var errors []error
 
-	if all {
-		switch v := interface{}(m.GetShipmentDetails()).(type) {
-		case interface{ ValidateAll() error }:
-			if err := v.ValidateAll(); err != nil {
-				errors = append(errors, QuoteRequestValidationError{
-					field:  "ShipmentDetails",
-					reason: "embedded message failed validation",
-					cause:  err,
-				})
-			}
-		case interface{ Validate() error }:
-			if err := v.Validate(); err != nil {
-				errors = append(errors, QuoteRequestValidationError{
-					field:  "ShipmentDetails",
-					reason: "embedded message failed validation",
-					cause:  err,
-				})
-			}
-		}
-	} else if v, ok := interface{}(m.GetShipmentDetails()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return QuoteRequestValidationError{
-				field:  "ShipmentDetails",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
+	// no validation rules for QuoteId
+
+	// no validation rules for RequesterId
+
+	// no validation rules for Mode
+
+	// no validation rules for LiablePartyId
+
+	// no validation rules for PickupDate
+
+	// no validation rules for DisplayDate
+
+	// no validation rules for DeliveryDate
+
+	// no validation rules for TotalItems
+
+	// no validation rules for TotalWeight
+
+	// no validation rules for ValidUntil
+
+	// no validation rules for EditMode
+
+	// no validation rules for BusinessId
+
+	// no validation rules for Type
 
 	for idx, item := range m.GetCommodities() {
 		_, _ = idx, item
@@ -178,77 +175,6 @@ func (m *QuoteRequest) validate(all bool) error {
 		}
 	}
 
-	if all {
-		switch v := interface{}(m.GetBid()).(type) {
-		case interface{ ValidateAll() error }:
-			if err := v.ValidateAll(); err != nil {
-				errors = append(errors, QuoteRequestValidationError{
-					field:  "Bid",
-					reason: "embedded message failed validation",
-					cause:  err,
-				})
-			}
-		case interface{ Validate() error }:
-			if err := v.Validate(); err != nil {
-				errors = append(errors, QuoteRequestValidationError{
-					field:  "Bid",
-					reason: "embedded message failed validation",
-					cause:  err,
-				})
-			}
-		}
-	} else if v, ok := interface{}(m.GetBid()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return QuoteRequestValidationError{
-				field:  "Bid",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
-
-	for idx, item := range m.GetBids() {
-		_, _ = idx, item
-
-		if all {
-			switch v := interface{}(item).(type) {
-			case interface{ ValidateAll() error }:
-				if err := v.ValidateAll(); err != nil {
-					errors = append(errors, QuoteRequestValidationError{
-						field:  fmt.Sprintf("Bids[%v]", idx),
-						reason: "embedded message failed validation",
-						cause:  err,
-					})
-				}
-			case interface{ Validate() error }:
-				if err := v.Validate(); err != nil {
-					errors = append(errors, QuoteRequestValidationError{
-						field:  fmt.Sprintf("Bids[%v]", idx),
-						reason: "embedded message failed validation",
-						cause:  err,
-					})
-				}
-			}
-		} else if v, ok := interface{}(item).(interface{ Validate() error }); ok {
-			if err := v.Validate(); err != nil {
-				return QuoteRequestValidationError{
-					field:  fmt.Sprintf("Bids[%v]", idx),
-					reason: "embedded message failed validation",
-					cause:  err,
-				}
-			}
-		}
-
-	}
-
-	// no validation rules for BusinessId
-
-	// no validation rules for Type
-
-	// no validation rules for QuoteId
-
-	// no validation rules for BookingSuccess
-
 	// no validation rules for SpecialInstruction
 
 	if len(errors) > 0 {
@@ -328,6 +254,305 @@ var _ interface {
 	ErrorName() string
 } = QuoteRequestValidationError{}
 
+// Validate checks the field values on QuoteResponse with the rules defined in
+// the proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
+func (m *QuoteResponse) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on QuoteResponse with the rules defined
+// in the proto definition for this message. If any rules are violated, the
+// result is a list of violation errors wrapped in QuoteResponseMultiError, or
+// nil if none found.
+func (m *QuoteResponse) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *QuoteResponse) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	if all {
+		switch v := interface{}(m.GetQuoteRequest()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, QuoteResponseValidationError{
+					field:  "QuoteRequest",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, QuoteResponseValidationError{
+					field:  "QuoteRequest",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetQuoteRequest()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return QuoteResponseValidationError{
+				field:  "QuoteRequest",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	for idx, item := range m.GetBids() {
+		_, _ = idx, item
+
+		if all {
+			switch v := interface{}(item).(type) {
+			case interface{ ValidateAll() error }:
+				if err := v.ValidateAll(); err != nil {
+					errors = append(errors, QuoteResponseValidationError{
+						field:  fmt.Sprintf("Bids[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			case interface{ Validate() error }:
+				if err := v.Validate(); err != nil {
+					errors = append(errors, QuoteResponseValidationError{
+						field:  fmt.Sprintf("Bids[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			}
+		} else if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return QuoteResponseValidationError{
+					field:  fmt.Sprintf("Bids[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	// no validation rules for Success
+
+	if len(errors) > 0 {
+		return QuoteResponseMultiError(errors)
+	}
+
+	return nil
+}
+
+// QuoteResponseMultiError is an error wrapping multiple validation errors
+// returned by QuoteResponse.ValidateAll() if the designated constraints
+// aren't met.
+type QuoteResponseMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m QuoteResponseMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m QuoteResponseMultiError) AllErrors() []error { return m }
+
+// QuoteResponseValidationError is the validation error returned by
+// QuoteResponse.Validate if the designated constraints aren't met.
+type QuoteResponseValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e QuoteResponseValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e QuoteResponseValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e QuoteResponseValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e QuoteResponseValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e QuoteResponseValidationError) ErrorName() string { return "QuoteResponseValidationError" }
+
+// Error satisfies the builtin error interface
+func (e QuoteResponseValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sQuoteResponse.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = QuoteResponseValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = QuoteResponseValidationError{}
+
+// Validate checks the field values on QuotesRequest with the rules defined in
+// the proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
+func (m *QuotesRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on QuotesRequest with the rules defined
+// in the proto definition for this message. If any rules are violated, the
+// result is a list of violation errors wrapped in QuotesRequestMultiError, or
+// nil if none found.
+func (m *QuotesRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *QuotesRequest) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	for idx, item := range m.GetQuoteRequests() {
+		_, _ = idx, item
+
+		if all {
+			switch v := interface{}(item).(type) {
+			case interface{ ValidateAll() error }:
+				if err := v.ValidateAll(); err != nil {
+					errors = append(errors, QuotesRequestValidationError{
+						field:  fmt.Sprintf("QuoteRequests[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			case interface{ Validate() error }:
+				if err := v.Validate(); err != nil {
+					errors = append(errors, QuotesRequestValidationError{
+						field:  fmt.Sprintf("QuoteRequests[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			}
+		} else if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return QuotesRequestValidationError{
+					field:  fmt.Sprintf("QuoteRequests[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	if len(errors) > 0 {
+		return QuotesRequestMultiError(errors)
+	}
+
+	return nil
+}
+
+// QuotesRequestMultiError is an error wrapping multiple validation errors
+// returned by QuotesRequest.ValidateAll() if the designated constraints
+// aren't met.
+type QuotesRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m QuotesRequestMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m QuotesRequestMultiError) AllErrors() []error { return m }
+
+// QuotesRequestValidationError is the validation error returned by
+// QuotesRequest.Validate if the designated constraints aren't met.
+type QuotesRequestValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e QuotesRequestValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e QuotesRequestValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e QuotesRequestValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e QuotesRequestValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e QuotesRequestValidationError) ErrorName() string { return "QuotesRequestValidationError" }
+
+// Error satisfies the builtin error interface
+func (e QuotesRequestValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sQuotesRequest.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = QuotesRequestValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = QuotesRequestValidationError{}
+
 // Validate checks the field values on QuotesResponse with the rules defined in
 // the proto definition for this message. If any rules are violated, the first
 // error encountered is returned, or nil if there are no violations.
@@ -350,7 +575,7 @@ func (m *QuotesResponse) validate(all bool) error {
 
 	var errors []error
 
-	for idx, item := range m.GetQuoteRequests() {
+	for idx, item := range m.GetQuoteResponses() {
 		_, _ = idx, item
 
 		if all {
@@ -358,7 +583,7 @@ func (m *QuotesResponse) validate(all bool) error {
 			case interface{ ValidateAll() error }:
 				if err := v.ValidateAll(); err != nil {
 					errors = append(errors, QuotesResponseValidationError{
-						field:  fmt.Sprintf("QuoteRequests[%v]", idx),
+						field:  fmt.Sprintf("QuoteResponses[%v]", idx),
 						reason: "embedded message failed validation",
 						cause:  err,
 					})
@@ -366,7 +591,7 @@ func (m *QuotesResponse) validate(all bool) error {
 			case interface{ Validate() error }:
 				if err := v.Validate(); err != nil {
 					errors = append(errors, QuotesResponseValidationError{
-						field:  fmt.Sprintf("QuoteRequests[%v]", idx),
+						field:  fmt.Sprintf("QuoteResponses[%v]", idx),
 						reason: "embedded message failed validation",
 						cause:  err,
 					})
@@ -375,7 +600,7 @@ func (m *QuotesResponse) validate(all bool) error {
 		} else if v, ok := interface{}(item).(interface{ Validate() error }); ok {
 			if err := v.Validate(); err != nil {
 				return QuotesResponseValidationError{
-					field:  fmt.Sprintf("QuoteRequests[%v]", idx),
+					field:  fmt.Sprintf("QuoteResponses[%v]", idx),
 					reason: "embedded message failed validation",
 					cause:  err,
 				}

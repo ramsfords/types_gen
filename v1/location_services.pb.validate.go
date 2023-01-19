@@ -34,3 +34,231 @@ var (
 	_ = anypb.Any{}
 	_ = sort.Sort
 )
+
+// Validate checks the field values on PickupLocationService with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the first error encountered is returned, or nil if there are no violations.
+func (m *PickupLocationService) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on PickupLocationService with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// PickupLocationServiceMultiError, or nil if none found.
+func (m *PickupLocationService) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *PickupLocationService) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	// no validation rules for LocationWithDock
+
+	// no validation rules for DockPickup
+
+	// no validation rules for PickupAppointment
+
+	// no validation rules for InsidePickup
+
+	// no validation rules for PickupNotification
+
+	// no validation rules for ShipperDeliveryNotification
+
+	if len(errors) > 0 {
+		return PickupLocationServiceMultiError(errors)
+	}
+
+	return nil
+}
+
+// PickupLocationServiceMultiError is an error wrapping multiple validation
+// errors returned by PickupLocationService.ValidateAll() if the designated
+// constraints aren't met.
+type PickupLocationServiceMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m PickupLocationServiceMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m PickupLocationServiceMultiError) AllErrors() []error { return m }
+
+// PickupLocationServiceValidationError is the validation error returned by
+// PickupLocationService.Validate if the designated constraints aren't met.
+type PickupLocationServiceValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e PickupLocationServiceValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e PickupLocationServiceValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e PickupLocationServiceValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e PickupLocationServiceValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e PickupLocationServiceValidationError) ErrorName() string {
+	return "PickupLocationServiceValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e PickupLocationServiceValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sPickupLocationService.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = PickupLocationServiceValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = PickupLocationServiceValidationError{}
+
+// Validate checks the field values on DeliveryLocationService with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the first error encountered is returned, or nil if there are no violations.
+func (m *DeliveryLocationService) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on DeliveryLocationService with the
+// rules defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// DeliveryLocationServiceMultiError, or nil if none found.
+func (m *DeliveryLocationService) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *DeliveryLocationService) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	// no validation rules for LocationWithDock
+
+	// no validation rules for DockDelivery
+
+	// no validation rules for DeliveryAppointment
+
+	// no validation rules for InsideDelivery
+
+	// no validation rules for ReceiverPickupNotification
+
+	// no validation rules for DeliveryNotification
+
+	if len(errors) > 0 {
+		return DeliveryLocationServiceMultiError(errors)
+	}
+
+	return nil
+}
+
+// DeliveryLocationServiceMultiError is an error wrapping multiple validation
+// errors returned by DeliveryLocationService.ValidateAll() if the designated
+// constraints aren't met.
+type DeliveryLocationServiceMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m DeliveryLocationServiceMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m DeliveryLocationServiceMultiError) AllErrors() []error { return m }
+
+// DeliveryLocationServiceValidationError is the validation error returned by
+// DeliveryLocationService.Validate if the designated constraints aren't met.
+type DeliveryLocationServiceValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e DeliveryLocationServiceValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e DeliveryLocationServiceValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e DeliveryLocationServiceValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e DeliveryLocationServiceValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e DeliveryLocationServiceValidationError) ErrorName() string {
+	return "DeliveryLocationServiceValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e DeliveryLocationServiceValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sDeliveryLocationService.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = DeliveryLocationServiceValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = DeliveryLocationServiceValidationError{}

@@ -177,6 +177,70 @@ func (m *QuoteRequest) validate(all bool) error {
 
 	// no validation rules for SpecialInstruction
 
+	// no validation rules for ShipperPickupReadyBy
+
+	// no validation rules for ShipperInstructions
+
+	// no validation rules for ReceiverInstructions
+
+	if all {
+		switch v := interface{}(m.GetDeliveryLocationServices()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, QuoteRequestValidationError{
+					field:  "DeliveryLocationServices",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, QuoteRequestValidationError{
+					field:  "DeliveryLocationServices",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetDeliveryLocationServices()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return QuoteRequestValidationError{
+				field:  "DeliveryLocationServices",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if all {
+		switch v := interface{}(m.GetPickupLocationServices()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, QuoteRequestValidationError{
+					field:  "PickupLocationServices",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, QuoteRequestValidationError{
+					field:  "PickupLocationServices",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetPickupLocationServices()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return QuoteRequestValidationError{
+				field:  "PickupLocationServices",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
 	if len(errors) > 0 {
 		return QuoteRequestMultiError(errors)
 	}

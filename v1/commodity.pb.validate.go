@@ -271,7 +271,7 @@ func (m *CommodityServices) validate(all bool) error {
 
 	// no validation rules for Hazardous
 
-	// no validation rules for Stackabe
+	// no validation rules for Stackable
 
 	if len(errors) > 0 {
 		return CommodityServicesMultiError(errors)

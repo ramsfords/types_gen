@@ -56,9 +56,9 @@ func (m *Address) validate(all bool) error {
 
 	var errors []error
 
-	// no validation rules for AddressLine_1
+	// no validation rules for AddressLine1
 
-	// no validation rules for AddressLine_2
+	// no validation rules for AddressLine2
 
 	// no validation rules for StreetName
 

@@ -26,10 +26,10 @@ type DimensionUOM struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// @gotags: dynamodbav:"inch,omitempty"
-	INCH string `protobuf:"bytes,1,opt,name=INCH,proto3" json:"INCH,omitempty" dynamodbav:"inch,omitempty"`
-	// @gotags: dynamodbav:"cm,omitempty"
-	CM string `protobuf:"bytes,2,opt,name=CM,proto3" json:"CM,omitempty" dynamodbav:"cm,omitempty"`
+	// @gotags: dynamodbav:"INCH,omitempty"
+	INCH string `protobuf:"bytes,1,opt,name=INCH,proto3" json:"INCH,omitempty" dynamodbav:"INCH,omitempty"`
+	// @gotags: dynamodbav:"CM,omitempty"
+	CM string `protobuf:"bytes,2,opt,name=CM,proto3" json:"CM,omitempty" dynamodbav:"CM,omitempty"`
 }
 
 func (x *DimensionUOM) Reset() {
@@ -83,10 +83,10 @@ type WeightUOM struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// @gotags: dynamodbav:"lb,omitempty"
-	LB string `protobuf:"bytes,1,opt,name=LB,proto3" json:"LB,omitempty" dynamodbav:"lb,omitempty"`
-	// @gotags: dynamodbav:"kg,omitempty"
-	KG string `protobuf:"bytes,2,opt,name=KG,proto3" json:"KG,omitempty" dynamodbav:"kg,omitempty"`
+	// @gotags: dynamodbav:"LB,omitempty"
+	LB string `protobuf:"bytes,1,opt,name=LB,proto3" json:"LB,omitempty" dynamodbav:"LB,omitempty"`
+	// @gotags: dynamodbav:"KG,omitempty"
+	KG string `protobuf:"bytes,2,opt,name=KG,proto3" json:"KG,omitempty" dynamodbav:"KG,omitempty"`
 }
 
 func (x *WeightUOM) Reset() {

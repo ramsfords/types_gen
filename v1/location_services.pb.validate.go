@@ -57,9 +57,9 @@ func (m *PickupLocationService) validate(all bool) error {
 
 	var errors []error
 
-	// no validation rules for LocationWithDock
+	// no validation rules for PickupLocationWithDock
 
-	// no validation rules for DockPickup
+	// no validation rules for LiftGatePickup
 
 	// no validation rules for PickupAppointment
 
@@ -171,9 +171,9 @@ func (m *DeliveryLocationService) validate(all bool) error {
 
 	var errors []error
 
-	// no validation rules for LocationWithDock
+	// no validation rules for DeliverLocationWithDock
 
-	// no validation rules for DockDelivery
+	// no validation rules for LiftGateDelivery
 
 	// no validation rules for DeliveryAppointment
 

@@ -111,6 +111,8 @@ func (m *Bid) validate(all bool) error {
 
 	// no validation rules for CarrierQuoteId
 
+	// no validation rules for QuoteId
+
 	if len(errors) > 0 {
 		return BidMultiError(errors)
 	}

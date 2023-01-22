@@ -67,7 +67,7 @@ func (m *Reference) validate(all bool) error {
 
 	// no validation rules for InvoiceNo
 
-	// no validation rules for VendorInvoiceNo
+	// no validation rules for VendorInvoiceNum
 
 	// no validation rules for BusinessId
 

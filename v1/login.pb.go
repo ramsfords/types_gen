@@ -27,9 +27,9 @@ type Login struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"email,omitempty"
-	Email string `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty" dynamodbav:"email,omitempty"`
+	Email string `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
 	// @gotags: dynamodbav:"password,omitempty"
-	Password string `protobuf:"bytes,2,opt,name=password,proto3" json:"password,omitempty" dynamodbav:"password,omitempty"`
+	Password string `protobuf:"bytes,2,opt,name=password,proto3" json:"password,omitempty"`
 }
 
 func (x *Login) Reset() {

@@ -35,22 +35,22 @@ var (
 	_ = sort.Sort
 )
 
-// Validate checks the field values on PhoneNumberData with the rules defined
-// in the proto definition for this message. If any rules are violated, the
-// first error encountered is returned, or nil if there are no violations.
-func (m *PhoneNumberData) Validate() error {
+// Validate checks the field values on PhoneNumber with the rules defined in
+// the proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
+func (m *PhoneNumber) Validate() error {
 	return m.validate(false)
 }
 
-// ValidateAll checks the field values on PhoneNumberData with the rules
-// defined in the proto definition for this message. If any rules are
-// violated, the result is a list of violation errors wrapped in
-// PhoneNumberDataMultiError, or nil if none found.
-func (m *PhoneNumberData) ValidateAll() error {
+// ValidateAll checks the field values on PhoneNumber with the rules defined in
+// the proto definition for this message. If any rules are violated, the
+// result is a list of violation errors wrapped in PhoneNumberMultiError, or
+// nil if none found.
+func (m *PhoneNumber) ValidateAll() error {
 	return m.validate(true)
 }
 
-func (m *PhoneNumberData) validate(all bool) error {
+func (m *PhoneNumber) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
@@ -62,19 +62,18 @@ func (m *PhoneNumberData) validate(all bool) error {
 	// no validation rules for Type
 
 	if len(errors) > 0 {
-		return PhoneNumberDataMultiError(errors)
+		return PhoneNumberMultiError(errors)
 	}
 
 	return nil
 }
 
-// PhoneNumberDataMultiError is an error wrapping multiple validation errors
-// returned by PhoneNumberData.ValidateAll() if the designated constraints
-// aren't met.
-type PhoneNumberDataMultiError []error
+// PhoneNumberMultiError is an error wrapping multiple validation errors
+// returned by PhoneNumber.ValidateAll() if the designated constraints aren't met.
+type PhoneNumberMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
-func (m PhoneNumberDataMultiError) Error() string {
+func (m PhoneNumberMultiError) Error() string {
 	var msgs []string
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
@@ -83,11 +82,11 @@ func (m PhoneNumberDataMultiError) Error() string {
 }
 
 // AllErrors returns a list of validation violation errors.
-func (m PhoneNumberDataMultiError) AllErrors() []error { return m }
+func (m PhoneNumberMultiError) AllErrors() []error { return m }
 
-// PhoneNumberDataValidationError is the validation error returned by
-// PhoneNumberData.Validate if the designated constraints aren't met.
-type PhoneNumberDataValidationError struct {
+// PhoneNumberValidationError is the validation error returned by
+// PhoneNumber.Validate if the designated constraints aren't met.
+type PhoneNumberValidationError struct {
 	field  string
 	reason string
 	cause  error
@@ -95,22 +94,22 @@ type PhoneNumberDataValidationError struct {
 }
 
 // Field function returns field value.
-func (e PhoneNumberDataValidationError) Field() string { return e.field }
+func (e PhoneNumberValidationError) Field() string { return e.field }
 
 // Reason function returns reason value.
-func (e PhoneNumberDataValidationError) Reason() string { return e.reason }
+func (e PhoneNumberValidationError) Reason() string { return e.reason }
 
 // Cause function returns cause value.
-func (e PhoneNumberDataValidationError) Cause() error { return e.cause }
+func (e PhoneNumberValidationError) Cause() error { return e.cause }
 
 // Key function returns key value.
-func (e PhoneNumberDataValidationError) Key() bool { return e.key }
+func (e PhoneNumberValidationError) Key() bool { return e.key }
 
 // ErrorName returns error name.
-func (e PhoneNumberDataValidationError) ErrorName() string { return "PhoneNumberDataValidationError" }
+func (e PhoneNumberValidationError) ErrorName() string { return "PhoneNumberValidationError" }
 
 // Error satisfies the builtin error interface
-func (e PhoneNumberDataValidationError) Error() string {
+func (e PhoneNumberValidationError) Error() string {
 	cause := ""
 	if e.cause != nil {
 		cause = fmt.Sprintf(" | caused by: %v", e.cause)
@@ -122,14 +121,14 @@ func (e PhoneNumberDataValidationError) Error() string {
 	}
 
 	return fmt.Sprintf(
-		"invalid %sPhoneNumberData.%s: %s%s",
+		"invalid %sPhoneNumber.%s: %s%s",
 		key,
 		e.field,
 		e.reason,
 		cause)
 }
 
-var _ error = PhoneNumberDataValidationError{}
+var _ error = PhoneNumberValidationError{}
 
 var _ interface {
 	Field() string
@@ -137,4 +136,4 @@ var _ interface {
 	Key() bool
 	Cause() error
 	ErrorName() string
-} = PhoneNumberDataValidationError{}
+} = PhoneNumberValidationError{}

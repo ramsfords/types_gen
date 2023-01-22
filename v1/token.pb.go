@@ -27,7 +27,7 @@ type RefreshToken struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"refresh_token,omitempty"
-	RefreshToken string `protobuf:"bytes,1,opt,name=refresh_token,json=refreshToken,proto3" json:"refresh_token,omitempty" dynamodbav:"refresh_token,omitempty"`
+	RefreshToken string `protobuf:"bytes,1,opt,name=refresh_token,json=refreshToken,proto3" json:"refresh_token,omitempty"`
 }
 
 func (x *RefreshToken) Reset() {
@@ -75,7 +75,7 @@ type Token struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"token,omitempty"
-	Token string `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty" dynamodbav:"token,omitempty"`
+	Token string `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
 }
 
 func (x *Token) Reset() {

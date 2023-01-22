@@ -59,11 +59,11 @@ func (m *SendEmail) validate(all bool) error {
 
 	// no validation rules for EmailSubject
 
-	// no validation rules for ReceiverEmailAddress
+	// no validation rules for ReceiverEmail
 
 	// no validation rules for ReceiverName
 
-	// no validation rules for EmailPurpose
+	// no validation rules for EmailTemplate
 
 	// no validation rules for Token
 

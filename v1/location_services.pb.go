@@ -26,17 +26,17 @@ type PickupLocationService struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"pickupLocationWithDock,omitempty"
-	PickupLocationWithDock bool `protobuf:"varint,1,opt,name=pickupLocationWithDock,proto3" json:"pickupLocationWithDock,omitempty" dynamodbav:"pickupLocationWithDock,omitempty"`
+	PickupLocationWithDock bool `protobuf:"varint,1,opt,name=pickupLocationWithDock,proto3" json:"pickupLocationWithDock,omitempty"`
 	// @gotags: dynamodbav:"liftGatePickup,omitempty"
-	LiftGatePickup bool `protobuf:"varint,2,opt,name=liftGatePickup,proto3" json:"liftGatePickup,omitempty" dynamodbav:"liftGatePickup,omitempty"`
+	LiftGatePickup bool `protobuf:"varint,2,opt,name=liftGatePickup,proto3" json:"liftGatePickup,omitempty"`
 	// @gotags: dynamodbav:"pickupAppointment,omitempty"
-	PickupAppointment bool `protobuf:"varint,3,opt,name=pickupAppointment,proto3" json:"pickupAppointment,omitempty" dynamodbav:"pickupAppointment,omitempty"`
+	PickupAppointment bool `protobuf:"varint,3,opt,name=pickupAppointment,proto3" json:"pickupAppointment,omitempty"`
 	// @gotags: dynamodbav:"insidePickup,omitempty"
-	InsidePickup bool `protobuf:"varint,4,opt,name=insidePickup,proto3" json:"insidePickup,omitempty" dynamodbav:"insidePickup,omitempty"`
+	InsidePickup bool `protobuf:"varint,4,opt,name=insidePickup,proto3" json:"insidePickup,omitempty"`
 	// @gotags: dynamodbav:"pickupNotification,omitempty"
-	PickupNotification bool `protobuf:"varint,5,opt,name=pickupNotification,proto3" json:"pickupNotification,omitempty" dynamodbav:"pickupNotification,omitempty"`
+	PickupNotification bool `protobuf:"varint,5,opt,name=pickupNotification,proto3" json:"pickupNotification,omitempty"`
 	// @gotags: dynamodbav:"shipperDeliveryNotification,omitempty"
-	ShipperDeliveryNotification bool `protobuf:"varint,6,opt,name=shipperDeliveryNotification,proto3" json:"shipperDeliveryNotification,omitempty" dynamodbav:"shipperDeliveryNotification,omitempty"`
+	ShipperDeliveryNotification bool `protobuf:"varint,6,opt,name=shipperDeliveryNotification,proto3" json:"shipperDeliveryNotification,omitempty"`
 }
 
 func (x *PickupLocationService) Reset() {
@@ -119,17 +119,17 @@ type DeliveryLocationService struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"deliverLocationWithDock,omitempty"
-	DeliverLocationWithDock bool `protobuf:"varint,1,opt,name=deliverLocationWithDock,proto3" json:"deliverLocationWithDock,omitempty" dynamodbav:"deliverLocationWithDock,omitempty"`
+	DeliverLocationWithDock bool `protobuf:"varint,1,opt,name=deliverLocationWithDock,proto3" json:"deliverLocationWithDock,omitempty"`
 	// @gotags: dynamodbav:"liftGateDelivery,omitempty"
-	LiftGateDelivery bool `protobuf:"varint,2,opt,name=liftGateDelivery,proto3" json:"liftGateDelivery,omitempty" dynamodbav:"liftGateDelivery,omitempty"`
+	LiftGateDelivery bool `protobuf:"varint,2,opt,name=liftGateDelivery,proto3" json:"liftGateDelivery,omitempty"`
 	// @gotags: dynamodbav:"deliveryAppointment,omitempty"
-	DeliveryAppointment bool `protobuf:"varint,3,opt,name=deliveryAppointment,proto3" json:"deliveryAppointment,omitempty" dynamodbav:"deliveryAppointment,omitempty"`
+	DeliveryAppointment bool `protobuf:"varint,3,opt,name=deliveryAppointment,proto3" json:"deliveryAppointment,omitempty"`
 	// @gotags: dynamodbav:"insideDelivery,omitempty"
-	InsideDelivery bool `protobuf:"varint,4,opt,name=insideDelivery,proto3" json:"insideDelivery,omitempty" dynamodbav:"insideDelivery,omitempty"`
+	InsideDelivery bool `protobuf:"varint,4,opt,name=insideDelivery,proto3" json:"insideDelivery,omitempty"`
 	// @gotags: dynamodbav:"receiverPickupNotification,omitempty"
-	ReceiverPickupNotification bool `protobuf:"varint,5,opt,name=receiverPickupNotification,proto3" json:"receiverPickupNotification,omitempty" dynamodbav:"receiverPickupNotification,omitempty"`
+	ReceiverPickupNotification bool `protobuf:"varint,5,opt,name=receiverPickupNotification,proto3" json:"receiverPickupNotification,omitempty"`
 	// @gotags: dynamodbav:"deliveryNotification,omitempty"
-	DeliveryNotification bool `protobuf:"varint,6,opt,name=deliveryNotification,proto3" json:"deliveryNotification,omitempty" dynamodbav:"deliveryNotification,omitempty"`
+	DeliveryNotification bool `protobuf:"varint,6,opt,name=deliveryNotification,proto3" json:"deliveryNotification,omitempty"`
 }
 
 func (x *DeliveryLocationService) Reset() {

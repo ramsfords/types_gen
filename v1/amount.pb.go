@@ -26,11 +26,11 @@ type Amount struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"fullAmount,omitempty"
-	FullAmount float64 `protobuf:"fixed64,1,opt,name=fullAmount,proto3" json:"fullAmount,omitempty" dynamodbav:"fullAmount,omitempty"`
+	FullAmount float64 `protobuf:"fixed64,1,opt,name=fullAmount,proto3" json:"fullAmount,omitempty"`
 	// @gotags: dynamodbav:"discountApplied,omitempty"
-	DiscountApplied float64 `protobuf:"fixed64,2,opt,name=discountApplied,proto3" json:"discountApplied,omitempty" dynamodbav:"discountApplied,omitempty"`
+	DiscountApplied float64 `protobuf:"fixed64,2,opt,name=discountApplied,proto3" json:"discountApplied,omitempty"`
 	// @gotags: dynamodbav:"netAmount,omitempty"
-	NetAmount float64 `protobuf:"fixed64,3,opt,name=netAmount,proto3" json:"netAmount,omitempty" dynamodbav:"netAmount,omitempty"`
+	NetAmount float64 `protobuf:"fixed64,3,opt,name=netAmount,proto3" json:"netAmount,omitempty"`
 }
 
 func (x *Amount) Reset() {

@@ -27,39 +27,39 @@ type Address struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"addressLine1,omitempty"
-	AddressLine1 string `protobuf:"bytes,1,opt,name=addressLine1,proto3" json:"addressLine1,omitempty" dynamodbav:"addressLine1,omitempty"`
+	AddressLine1 string `protobuf:"bytes,1,opt,name=addressLine1,proto3" json:"addressLine1,omitempty"`
 	// @gotags: dynamodbav:"addressLine2,omitempty"
-	AddressLine2 string `protobuf:"bytes,2,opt,name=addressLine2,proto3" json:"addressLine2,omitempty" dynamodbav:"addressLine2,omitempty"`
+	AddressLine2 string `protobuf:"bytes,2,opt,name=addressLine2,proto3" json:"addressLine2,omitempty"`
 	// @gotags: dynamodbav:"streetName,omitempty"
-	StreetName string `protobuf:"bytes,3,opt,name=streetName,proto3" json:"streetName,omitempty" dynamodbav:"streetName,omitempty"`
+	StreetName string `protobuf:"bytes,3,opt,name=streetName,proto3" json:"streetName,omitempty"`
 	// @gotags: dynamodbav:"city,omitempty"
-	City string `protobuf:"bytes,4,opt,name=city,proto3" json:"city,omitempty" dynamodbav:"city,omitempty"`
+	City string `protobuf:"bytes,4,opt,name=city,proto3" json:"city,omitempty"`
 	// @gotags: dynamodbav:"county,omitempty"
-	County string `protobuf:"bytes,5,opt,name=county,proto3" json:"county,omitempty" dynamodbav:"county,omitempty"`
+	County string `protobuf:"bytes,5,opt,name=county,proto3" json:"county,omitempty"`
 	// @gotags: dynamodbav:"zipCode,omitempty"
-	ZipCode string `protobuf:"bytes,6,opt,name=zipCode,proto3" json:"zipCode,omitempty" dynamodbav:"zipCode,omitempty"`
+	ZipCode string `protobuf:"bytes,6,opt,name=zipCode,proto3" json:"zipCode,omitempty"`
 	// @gotags: dynamodbav:"state,omitempty"
-	State string `protobuf:"bytes,7,opt,name=state,proto3" json:"state,omitempty" dynamodbav:"state,omitempty"`
+	State string `protobuf:"bytes,7,opt,name=state,proto3" json:"state,omitempty"`
 	// @gotags: dynamodbav:"stateCode,omitempty"
-	StateCode string `protobuf:"bytes,8,opt,name=stateCode,proto3" json:"stateCode,omitempty" dynamodbav:"stateCode,omitempty"`
+	StateCode string `protobuf:"bytes,8,opt,name=stateCode,proto3" json:"stateCode,omitempty"`
 	// @gotags: dynamodbav:"extendedZipCode,omitempty"
-	ExtendedZipCode string `protobuf:"bytes,9,opt,name=extendedZipCode,proto3" json:"extendedZipCode,omitempty" dynamodbav:"extendedZipCode,omitempty"`
+	ExtendedZipCode string `protobuf:"bytes,9,opt,name=extendedZipCode,proto3" json:"extendedZipCode,omitempty"`
 	// @gotags: dynamodbav:"country,omitempty"
-	Country string `protobuf:"bytes,10,opt,name=country,proto3" json:"country,omitempty" dynamodbav:"country,omitempty"`
+	Country string `protobuf:"bytes,10,opt,name=country,proto3" json:"country,omitempty"`
 	// @gotags: dynamodbav:"countryCode,omitempty"
-	CountryCode string `protobuf:"bytes,11,opt,name=countryCode,proto3" json:"countryCode,omitempty" dynamodbav:"countryCode,omitempty"`
+	CountryCode string `protobuf:"bytes,11,opt,name=countryCode,proto3" json:"countryCode,omitempty"`
 	// @gotags: dynamodbav:"freeFormAddress,omitempty"
-	FreeFormAddress string `protobuf:"bytes,12,opt,name=freeFormAddress,proto3" json:"freeFormAddress,omitempty" dynamodbav:"freeFormAddress,omitempty"`
+	FreeFormAddress string `protobuf:"bytes,12,opt,name=freeFormAddress,proto3" json:"freeFormAddress,omitempty"`
 	// @gotags: dynamodbav:"localName,omitempty"
-	LocalName string `protobuf:"bytes,13,opt,name=localName,proto3" json:"localName,omitempty" dynamodbav:"localName,omitempty"`
+	LocalName string `protobuf:"bytes,13,opt,name=localName,proto3" json:"localName,omitempty"`
 	// @gotags: dynamodbav:"lat,omitempty"
-	Lat float32 `protobuf:"fixed32,14,opt,name=lat,proto3" json:"lat,omitempty" dynamodbav:"lat,omitempty"`
+	Lat float32 `protobuf:"fixed32,14,opt,name=lat,proto3" json:"lat,omitempty"`
 	// @gotags: dynamodbav:"long,omitempty"
-	Long float32 `protobuf:"fixed32,15,opt,name=long,proto3" json:"long,omitempty" dynamodbav:"long,omitempty"`
+	Long float32 `protobuf:"fixed32,15,opt,name=long,proto3" json:"long,omitempty"`
 	// @gotags: dynamodbav:"businessId,omitempty"
-	BusinessId string `protobuf:"bytes,16,opt,name=businessId,proto3" json:"businessId,omitempty" dynamodbav:"businessId,omitempty"`
+	BusinessId string `protobuf:"bytes,16,opt,name=businessId,proto3" json:"businessId,omitempty"`
 	// @gotags: dynamodbav:"type,omitempty"
-	Type string `protobuf:"bytes,17,opt,name=type,proto3" json:"type,omitempty" dynamodbav:"type,omitempty"`
+	Type string `protobuf:"bytes,17,opt,name=type,proto3" json:"type,omitempty"`
 }
 
 func (x *Address) Reset() {

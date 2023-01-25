@@ -21,7 +21,7 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type LogOut struct {
+type Logout struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -30,8 +30,8 @@ type LogOut struct {
 	UserId string `protobuf:"bytes,1,opt,name=userId,proto3" json:"userId,omitempty"`
 }
 
-func (x *LogOut) Reset() {
-	*x = LogOut{}
+func (x *Logout) Reset() {
+	*x = Logout{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_log_out_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -39,13 +39,13 @@ func (x *LogOut) Reset() {
 	}
 }
 
-func (x *LogOut) String() string {
+func (x *Logout) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*LogOut) ProtoMessage() {}
+func (*Logout) ProtoMessage() {}
 
-func (x *LogOut) ProtoReflect() protoreflect.Message {
+func (x *Logout) ProtoReflect() protoreflect.Message {
 	mi := &file_log_out_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -57,12 +57,12 @@ func (x *LogOut) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use LogOut.ProtoReflect.Descriptor instead.
-func (*LogOut) Descriptor() ([]byte, []int) {
+// Deprecated: Use Logout.ProtoReflect.Descriptor instead.
+func (*Logout) Descriptor() ([]byte, []int) {
 	return file_log_out_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *LogOut) GetUserId() string {
+func (x *Logout) GetUserId() string {
 	if x != nil {
 		return x.UserId
 	}
@@ -75,7 +75,7 @@ var file_log_out_proto_rawDesc = []byte{
 	0x0a, 0x0d, 0x6c, 0x6f, 0x67, 0x5f, 0x6f, 0x75, 0x74, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12,
 	0x02, 0x76, 0x31, 0x1a, 0x17, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x61, 0x74, 0x65, 0x2f, 0x76, 0x61,
 	0x6c, 0x69, 0x64, 0x61, 0x74, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x20, 0x0a, 0x06,
-	0x6c, 0x6f, 0x67, 0x4f, 0x75, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64,
+	0x6c, 0x6f, 0x67, 0x6f, 0x75, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64,
 	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65, 0x72, 0x49, 0x64, 0x42, 0x60,
 	0x0a, 0x06, 0x63, 0x6f, 0x6d, 0x2e, 0x76, 0x31, 0x42, 0x0b, 0x4c, 0x6f, 0x67, 0x4f, 0x75, 0x74,
 	0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x01, 0x5a, 0x21, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e,
@@ -100,7 +100,7 @@ func file_log_out_proto_rawDescGZIP() []byte {
 
 var file_log_out_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_log_out_proto_goTypes = []interface{}{
-	(*LogOut)(nil), // 0: v1.logOut
+	(*Logout)(nil), // 0: v1.logout
 }
 var file_log_out_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
@@ -117,7 +117,7 @@ func file_log_out_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_log_out_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*LogOut); i {
+			switch v := v.(*Logout); i {
 			case 0:
 				return &v.state
 			case 1:

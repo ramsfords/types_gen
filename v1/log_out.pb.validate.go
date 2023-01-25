@@ -35,21 +35,21 @@ var (
 	_ = sort.Sort
 )
 
-// Validate checks the field values on LogOut with the rules defined in the
+// Validate checks the field values on Logout with the rules defined in the
 // proto definition for this message. If any rules are violated, the first
 // error encountered is returned, or nil if there are no violations.
-func (m *LogOut) Validate() error {
+func (m *Logout) Validate() error {
 	return m.validate(false)
 }
 
-// ValidateAll checks the field values on LogOut with the rules defined in the
+// ValidateAll checks the field values on Logout with the rules defined in the
 // proto definition for this message. If any rules are violated, the result is
-// a list of violation errors wrapped in LogOutMultiError, or nil if none found.
-func (m *LogOut) ValidateAll() error {
+// a list of violation errors wrapped in LogoutMultiError, or nil if none found.
+func (m *Logout) ValidateAll() error {
 	return m.validate(true)
 }
 
-func (m *LogOut) validate(all bool) error {
+func (m *Logout) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
@@ -59,18 +59,18 @@ func (m *LogOut) validate(all bool) error {
 	// no validation rules for UserId
 
 	if len(errors) > 0 {
-		return LogOutMultiError(errors)
+		return LogoutMultiError(errors)
 	}
 
 	return nil
 }
 
-// LogOutMultiError is an error wrapping multiple validation errors returned by
-// LogOut.ValidateAll() if the designated constraints aren't met.
-type LogOutMultiError []error
+// LogoutMultiError is an error wrapping multiple validation errors returned by
+// Logout.ValidateAll() if the designated constraints aren't met.
+type LogoutMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
-func (m LogOutMultiError) Error() string {
+func (m LogoutMultiError) Error() string {
 	var msgs []string
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
@@ -79,11 +79,11 @@ func (m LogOutMultiError) Error() string {
 }
 
 // AllErrors returns a list of validation violation errors.
-func (m LogOutMultiError) AllErrors() []error { return m }
+func (m LogoutMultiError) AllErrors() []error { return m }
 
-// LogOutValidationError is the validation error returned by LogOut.Validate if
+// LogoutValidationError is the validation error returned by Logout.Validate if
 // the designated constraints aren't met.
-type LogOutValidationError struct {
+type LogoutValidationError struct {
 	field  string
 	reason string
 	cause  error
@@ -91,22 +91,22 @@ type LogOutValidationError struct {
 }
 
 // Field function returns field value.
-func (e LogOutValidationError) Field() string { return e.field }
+func (e LogoutValidationError) Field() string { return e.field }
 
 // Reason function returns reason value.
-func (e LogOutValidationError) Reason() string { return e.reason }
+func (e LogoutValidationError) Reason() string { return e.reason }
 
 // Cause function returns cause value.
-func (e LogOutValidationError) Cause() error { return e.cause }
+func (e LogoutValidationError) Cause() error { return e.cause }
 
 // Key function returns key value.
-func (e LogOutValidationError) Key() bool { return e.key }
+func (e LogoutValidationError) Key() bool { return e.key }
 
 // ErrorName returns error name.
-func (e LogOutValidationError) ErrorName() string { return "LogOutValidationError" }
+func (e LogoutValidationError) ErrorName() string { return "LogoutValidationError" }
 
 // Error satisfies the builtin error interface
-func (e LogOutValidationError) Error() string {
+func (e LogoutValidationError) Error() string {
 	cause := ""
 	if e.cause != nil {
 		cause = fmt.Sprintf(" | caused by: %v", e.cause)
@@ -118,14 +118,14 @@ func (e LogOutValidationError) Error() string {
 	}
 
 	return fmt.Sprintf(
-		"invalid %sLogOut.%s: %s%s",
+		"invalid %sLogout.%s: %s%s",
 		key,
 		e.field,
 		e.reason,
 		cause)
 }
 
-var _ error = LogOutValidationError{}
+var _ error = LogoutValidationError{}
 
 var _ interface {
 	Field() string
@@ -133,4 +133,4 @@ var _ interface {
 	Key() bool
 	Cause() error
 	ErrorName() string
-} = LogOutValidationError{}
+} = LogoutValidationError{}

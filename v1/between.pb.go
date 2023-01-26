@@ -26,9 +26,9 @@ type Between struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"startsFrom,omitempty"
-	StartsFrom string `protobuf:"bytes,1,opt,name=startsFrom,proto3" json:"startsFrom,omitempty"`
+	StartsFrom string `protobuf:"bytes,1,opt,name=startsFrom,proto3" json:"startsFrom,omitempty" dynamodbav:"startsFrom,omitempty"`
 	// @gotags: dynamodbav:"endsOn,omitempty"
-	EndOn string `protobuf:"bytes,2,opt,name=endOn,proto3" json:"endOn,omitempty"`
+	EndOn string `protobuf:"bytes,2,opt,name=endOn,proto3" json:"endOn,omitempty" dynamodbav:"endsOn,omitempty"`
 }
 
 func (x *Between) Reset() {

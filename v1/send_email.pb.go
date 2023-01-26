@@ -26,17 +26,17 @@ type SendEmail struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"emailSubject,omitempty"
-	EmailSubject string `protobuf:"bytes,1,opt,name=emailSubject,proto3" json:"emailSubject,omitempty"`
+	EmailSubject string `protobuf:"bytes,1,opt,name=emailSubject,proto3" json:"emailSubject,omitempty" dynamodbav:"emailSubject,omitempty"`
 	// @gotags: dynamodbav:"receiverEmail,omitempty"
-	ReceiverEmail string `protobuf:"bytes,2,opt,name=receiverEmail,proto3" json:"receiverEmail,omitempty"`
+	ReceiverEmail string `protobuf:"bytes,2,opt,name=receiverEmail,proto3" json:"receiverEmail,omitempty" dynamodbav:"receiverEmail,omitempty"`
 	// @gotags: dynamodbav:"receiverName,omitempty"
-	ReceiverName string `protobuf:"bytes,3,opt,name=receiverName,proto3" json:"receiverName,omitempty"`
+	ReceiverName string `protobuf:"bytes,3,opt,name=receiverName,proto3" json:"receiverName,omitempty" dynamodbav:"receiverName,omitempty"`
 	// @gotags: dynamodbav:"emailTemplate,omitempty"
-	EmailTemplate EmailTemplate `protobuf:"varint,4,opt,name=emailTemplate,proto3,enum=v1.EmailTemplate" json:"emailTemplate,omitempty"`
+	EmailTemplate EmailTemplate `protobuf:"varint,4,opt,name=emailTemplate,proto3,enum=v1.EmailTemplate" json:"emailTemplate,omitempty" dynamodbav:"emailTemplate,omitempty"`
 	// @gotags: dynamodbav:"token,omitempty"
-	Token string `protobuf:"bytes,5,opt,name=token,proto3" json:"token,omitempty"`
+	Token string `protobuf:"bytes,5,opt,name=token,proto3" json:"token,omitempty" dynamodbav:"token,omitempty"`
 	// @gotags: dynamodbav:"success,omitempty"
-	Success bool `protobuf:"varint,6,opt,name=success,proto3" json:"success,omitempty"`
+	Success bool `protobuf:"varint,6,opt,name=success,proto3" json:"success,omitempty" dynamodbav:"success,omitempty"`
 }
 
 func (x *SendEmail) Reset() {

@@ -27,7 +27,7 @@ type ForgotPassword struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"email"
-	Email string `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
+	Email string `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty" dynamodbav:"email"`
 }
 
 func (x *ForgotPassword) Reset() {
@@ -75,15 +75,15 @@ type ResetPasswordToken struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"issuedTo,omitempty"
-	IssuedTo string `protobuf:"bytes,1,opt,name=issuedTo,proto3" json:"issuedTo,omitempty"`
+	IssuedTo string `protobuf:"bytes,1,opt,name=issuedTo,proto3" json:"issuedTo,omitempty" dynamodbav:"issuedTo,omitempty"`
 	// @gotags: dynamodbav:"issuedOn,omitempty"
-	IssuedOn string `protobuf:"bytes,2,opt,name=issuedOn,proto3" json:"issuedOn,omitempty"`
+	IssuedOn string `protobuf:"bytes,2,opt,name=issuedOn,proto3" json:"issuedOn,omitempty" dynamodbav:"issuedOn,omitempty"`
 	// @gotags: dynamodbav:"expiresOn,omitempty"
-	ExpiresOn string `protobuf:"bytes,3,opt,name=expiresOn,proto3" json:"expiresOn,omitempty"`
+	ExpiresOn string `protobuf:"bytes,3,opt,name=expiresOn,proto3" json:"expiresOn,omitempty" dynamodbav:"expiresOn,omitempty"`
 	// @gotags: dynamodbav:"token,omitempty"
-	Token string `protobuf:"bytes,4,opt,name=token,proto3" json:"token,omitempty"`
+	Token string `protobuf:"bytes,4,opt,name=token,proto3" json:"token,omitempty" dynamodbav:"token,omitempty"`
 	// @gotags: dynamodbav:"businessId,omitempty"
-	BusinessId string `protobuf:"bytes,5,opt,name=businessId,proto3" json:"businessId,omitempty"`
+	BusinessId string `protobuf:"bytes,5,opt,name=businessId,proto3" json:"businessId,omitempty" dynamodbav:"businessId,omitempty"`
 }
 
 func (x *ResetPasswordToken) Reset() {
@@ -159,13 +159,13 @@ type ResetPassword struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"token,omitempty"
-	Token string `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
+	Token string `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty" dynamodbav:"token,omitempty"`
 	// @gotags: dynamodbav:"newPassword,omitempty"
-	NewPassword string `protobuf:"bytes,2,opt,name=newPassword,proto3" json:"newPassword,omitempty"`
+	NewPassword string `protobuf:"bytes,2,opt,name=newPassword,proto3" json:"newPassword,omitempty" dynamodbav:"newPassword,omitempty"`
 	// @gotags: dynamodbav:"confirmPassword,omitempty"
-	ConfirmPassword string `protobuf:"bytes,3,opt,name=confirmPassword,proto3" json:"confirmPassword,omitempty"`
+	ConfirmPassword string `protobuf:"bytes,3,opt,name=confirmPassword,proto3" json:"confirmPassword,omitempty" dynamodbav:"confirmPassword,omitempty"`
 	// @gotags: dynamodbav:"email,omitempty"
-	Email string `protobuf:"bytes,4,opt,name=email,proto3" json:"email,omitempty"`
+	Email string `protobuf:"bytes,4,opt,name=email,proto3" json:"email,omitempty" dynamodbav:"email,omitempty"`
 }
 
 func (x *ResetPassword) Reset() {

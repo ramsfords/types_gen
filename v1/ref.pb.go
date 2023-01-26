@@ -26,21 +26,21 @@ type Reference struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"vendorBol,omitempty"
-	VendorBol string `protobuf:"bytes,1,opt,name=vendorBol,proto3" json:"vendorBol,omitempty"`
+	VendorBol string `protobuf:"bytes,1,opt,name=vendorBol,proto3" json:"vendorBol,omitempty" dynamodbav:"vendorBol,omitempty"`
 	// @gotags: dynamodbav:"bol,omitempty"
-	Bol string `protobuf:"bytes,2,opt,name=bol,proto3" json:"bol,omitempty"`
+	Bol string `protobuf:"bytes,2,opt,name=bol,proto3" json:"bol,omitempty" dynamodbav:"bol,omitempty"`
 	// @gotags: dynamodbav:"vendorReferenceId,omitempty"
-	VendorReferenceId string `protobuf:"bytes,3,opt,name=vendorReferenceId,proto3" json:"vendorReferenceId,omitempty"`
+	VendorReferenceId string `protobuf:"bytes,3,opt,name=vendorReferenceId,proto3" json:"vendorReferenceId,omitempty" dynamodbav:"vendorReferenceId,omitempty"`
 	// @gotags: dynamodbav:"pickupNo,omitempty"
-	PickupNo string `protobuf:"bytes,4,opt,name=pickupNo,proto3" json:"pickupNo,omitempty"`
+	PickupNo string `protobuf:"bytes,4,opt,name=pickupNo,proto3" json:"pickupNo,omitempty" dynamodbav:"pickupNo,omitempty"`
 	// @gotags: dynamodbav:"invoiceNo,omitempty"
-	InvoiceNo string `protobuf:"bytes,5,opt,name=invoiceNo,proto3" json:"invoiceNo,omitempty"`
+	InvoiceNo string `protobuf:"bytes,5,opt,name=invoiceNo,proto3" json:"invoiceNo,omitempty" dynamodbav:"invoiceNo,omitempty"`
 	// @gotags: dynamodbav:"vendorInvoiceNum,omitempty"
-	VendorInvoiceNum string `protobuf:"bytes,6,opt,name=vendorInvoiceNum,proto3" json:"vendorInvoiceNum,omitempty"`
+	VendorInvoiceNum string `protobuf:"bytes,6,opt,name=vendorInvoiceNum,proto3" json:"vendorInvoiceNum,omitempty" dynamodbav:"vendorInvoiceNum,omitempty"`
 	// @gotags: dynamodbav:"businessId,omitempty"
-	BusinessId string `protobuf:"bytes,7,opt,name=businessId,proto3" json:"businessId,omitempty"`
+	BusinessId string `protobuf:"bytes,7,opt,name=businessId,proto3" json:"businessId,omitempty" dynamodbav:"businessId,omitempty"`
 	// @gotags: dynamodbav:"type,omitempty"
-	Type string `protobuf:"bytes,8,opt,name=type,proto3" json:"type,omitempty"`
+	Type string `protobuf:"bytes,8,opt,name=type,proto3" json:"type,omitempty" dynamodbav:"type,omitempty"`
 }
 
 func (x *Reference) Reset() {

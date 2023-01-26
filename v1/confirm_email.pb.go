@@ -27,15 +27,15 @@ type ConfirmEmail struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"email,omitempty"
-	Email string `protobuf:"bytes,1,opt,name=email,json=email,omitempty,proto3" json:"email,omitempty"`
+	Email string `protobuf:"bytes,1,opt,name=email,json=email,omitempty,proto3" json:"email,omitempty" dynamodbav:"email,omitempty"`
 	// @gotags: dynamodbav:"userName,omitempty"
-	UserName string `protobuf:"bytes,2,opt,name=userName,proto3" json:"userName,omitempty"`
+	UserName string `protobuf:"bytes,2,opt,name=userName,proto3" json:"userName,omitempty" dynamodbav:"userName,omitempty"`
 	// @gotags: dynamodbav:"confirmationCode,omitempty"
-	ConfirmationCode string `protobuf:"bytes,3,opt,name=confirmationCode,proto3" json:"confirmationCode,omitempty"`
+	ConfirmationCode string `protobuf:"bytes,3,opt,name=confirmationCode,proto3" json:"confirmationCode,omitempty" dynamodbav:"confirmationCode,omitempty"`
 	// @gotags: dynamodbav:"token,omitempty"
-	Token string `protobuf:"bytes,4,opt,name=token,proto3" json:"token,omitempty"`
+	Token string `protobuf:"bytes,4,opt,name=token,proto3" json:"token,omitempty" dynamodbav:"token,omitempty"`
 	// @gotags: dynamodbav:"businessId,omitempty"
-	BusinessId string `protobuf:"bytes,5,opt,name=businessId,proto3" json:"businessId,omitempty"`
+	BusinessId string `protobuf:"bytes,5,opt,name=businessId,proto3" json:"businessId,omitempty" dynamodbav:"businessId,omitempty"`
 }
 
 func (x *ConfirmEmail) Reset() {

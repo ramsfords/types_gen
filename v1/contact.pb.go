@@ -26,21 +26,21 @@ type Contact struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"name,omitempty"
-	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty" dynamodbav:"name,omitempty"`
 	// @gotags: dynamodbav:"phoneNumber,omitempty"
-	PhoneNumber string `protobuf:"bytes,3,opt,name=phoneNumber,proto3" json:"phoneNumber,omitempty"`
+	PhoneNumber string `protobuf:"bytes,3,opt,name=phoneNumber,proto3" json:"phoneNumber,omitempty" dynamodbav:"phoneNumber,omitempty"`
 	// @gotags: dynamodbav:"emailAddress,omitempty"
-	EmailAddress string `protobuf:"bytes,5,opt,name=emailAddress,proto3" json:"emailAddress,omitempty"`
+	EmailAddress string `protobuf:"bytes,5,opt,name=emailAddress,proto3" json:"emailAddress,omitempty" dynamodbav:"emailAddress,omitempty"`
 	// @gotags: dynamodbav:"phoneNumberDisplay,omitempty"
-	PhoneNumberDisplay string `protobuf:"bytes,6,opt,name=phoneNumberDisplay,proto3" json:"phoneNumberDisplay,omitempty"`
+	PhoneNumberDisplay string `protobuf:"bytes,6,opt,name=phoneNumberDisplay,proto3" json:"phoneNumberDisplay,omitempty" dynamodbav:"phoneNumberDisplay,omitempty"`
 	// @gotags: dynamodbav:"roles,omitempty"
-	Roles []Role `protobuf:"varint,7,rep,packed,name=roles,proto3,enum=v1.Role" json:"roles,omitempty"`
+	Roles []Role `protobuf:"varint,7,rep,packed,name=roles,proto3,enum=v1.Role" json:"roles,omitempty" dynamodbav:"roles,omitempty"`
 	// @gotags: dynamodbav:"prefferedContactMethod,omitempty"
-	PrefferedContactMethod string `protobuf:"bytes,8,opt,name=prefferedContactMethod,proto3" json:"prefferedContactMethod,omitempty"`
+	PrefferedContactMethod string `protobuf:"bytes,8,opt,name=prefferedContactMethod,proto3" json:"prefferedContactMethod,omitempty" dynamodbav:"prefferedContactMethod,omitempty"`
 	// @gotags: dynamodbav:"businessId,omitempty"
-	BusinessId string `protobuf:"bytes,9,opt,name=businessId,proto3" json:"businessId,omitempty"`
+	BusinessId string `protobuf:"bytes,9,opt,name=businessId,proto3" json:"businessId,omitempty" dynamodbav:"businessId,omitempty"`
 	// @gotags: dynamodbav:"type,omitempty"
-	Type string `protobuf:"bytes,10,opt,name=type,proto3" json:"type,omitempty"`
+	Type string `protobuf:"bytes,10,opt,name=type,proto3" json:"type,omitempty" dynamodbav:"type,omitempty"`
 }
 
 func (x *Contact) Reset() {

@@ -27,17 +27,17 @@ type Carrier struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"name,omitempty"
-	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty" dynamodbav:"name,omitempty"`
 	// @gotags: dynamodbav:"authUrl,omitempty"
-	AuthUrl string `protobuf:"bytes,2,opt,name=authUrl,proto3" json:"authUrl,omitempty"`
+	AuthUrl string `protobuf:"bytes,2,opt,name=authUrl,proto3" json:"authUrl,omitempty" dynamodbav:"authUrl,omitempty"`
 	// @gotags: dynamodbav:"rateUrl,omitempty"
-	RateUrl string `protobuf:"bytes,3,opt,name=rateUrl,proto3" json:"rateUrl,omitempty"`
+	RateUrl string `protobuf:"bytes,3,opt,name=rateUrl,proto3" json:"rateUrl,omitempty" dynamodbav:"rateUrl,omitempty"`
 	// @gotags: dynamodbav:"addAddressUrl,omitempty"
-	AddAddressUrl string `protobuf:"bytes,4,opt,name=addAddressUrl,proto3" json:"addAddressUrl,omitempty"`
+	AddAddressUrl string `protobuf:"bytes,4,opt,name=addAddressUrl,proto3" json:"addAddressUrl,omitempty" dynamodbav:"addAddressUrl,omitempty"`
 	// @gotags: dynamodbav:"getAddressUrl,omitempty"
-	GetAddressUrl string `protobuf:"bytes,5,opt,name=getAddressUrl,proto3" json:"getAddressUrl,omitempty"`
+	GetAddressUrl string `protobuf:"bytes,5,opt,name=getAddressUrl,proto3" json:"getAddressUrl,omitempty" dynamodbav:"getAddressUrl,omitempty"`
 	// @gotags: dynamodbav:"quoteHistoryUrl,omitempty"
-	QuoteHistoryUrl string `protobuf:"bytes,6,opt,name=quoteHistoryUrl,proto3" json:"quoteHistoryUrl,omitempty"`
+	QuoteHistoryUrl string `protobuf:"bytes,6,opt,name=quoteHistoryUrl,proto3" json:"quoteHistoryUrl,omitempty" dynamodbav:"quoteHistoryUrl,omitempty"`
 }
 
 func (x *Carrier) Reset() {

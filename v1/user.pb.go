@@ -27,41 +27,41 @@ type User struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"name,omitempty"
-	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty" dynamodbav:"name,omitempty"`
 	// @gotags: dynamodbav:"userName,omitempty"
-	UserName string `protobuf:"bytes,2,opt,name=userName,proto3" json:"userName,omitempty"`
+	UserName string `protobuf:"bytes,2,opt,name=userName,proto3" json:"userName,omitempty" dynamodbav:"userName,omitempty"`
 	// @gotags: dynamodbav:"password,omitempty"
-	Password string `protobuf:"bytes,3,opt,name=password,proto3" json:"password,omitempty"`
+	Password string `protobuf:"bytes,3,opt,name=password,proto3" json:"password,omitempty" dynamodbav:"password,omitempty"`
 	// @gotags: dynamodbav:"confirmPassword,omitempty"
-	ConfirmPassword string `protobuf:"bytes,4,opt,name=confirmPassword,proto3" json:"confirmPassword,omitempty"`
+	ConfirmPassword string `protobuf:"bytes,4,opt,name=confirmPassword,proto3" json:"confirmPassword,omitempty" dynamodbav:"confirmPassword,omitempty"`
 	// @gotags: dynamodbav:"origin,omitempty"
-	Origin string `protobuf:"bytes,5,opt,name=origin,proto3" json:"origin,omitempty"`
+	Origin string `protobuf:"bytes,5,opt,name=origin,proto3" json:"origin,omitempty" dynamodbav:"origin,omitempty"`
 	// @gotags: dynamodbav:"emailVisibility,omitempty"
-	EmailVisibility bool `protobuf:"varint,6,opt,name=emailVisibility,proto3" json:"emailVisibility,omitempty"`
+	EmailVisibility bool `protobuf:"varint,6,opt,name=emailVisibility,proto3" json:"emailVisibility,omitempty" dynamodbav:"emailVisibility,omitempty"`
 	// @gotags: dynamodbav:"type,omitempty"
-	Type string `protobuf:"bytes,7,opt,name=type,proto3" json:"type,omitempty"`
+	Type string `protobuf:"bytes,7,opt,name=type,proto3" json:"type,omitempty" dynamodbav:"type,omitempty"`
 	// @gotags: dynamodbav:"id,omitempty"
-	Id string `protobuf:"bytes,8,opt,name=id,proto3" json:"id,omitempty"`
+	Id string `protobuf:"bytes,8,opt,name=id,proto3" json:"id,omitempty" dynamodbav:"id,omitempty"`
 	// @gotags: dynamodbav:"created,omitempty"
-	Created string `protobuf:"bytes,9,opt,name=created,proto3" json:"created,omitempty"`
+	Created string `protobuf:"bytes,9,opt,name=created,proto3" json:"created,omitempty" dynamodbav:"created,omitempty"`
 	// @gotags: dynamodbav:"updated,omitempty"
-	Updated string `protobuf:"bytes,10,opt,name=updated,proto3" json:"updated,omitempty"`
+	Updated string `protobuf:"bytes,10,opt,name=updated,proto3" json:"updated,omitempty" dynamodbav:"updated,omitempty"`
 	// @gotags: dynamodbav:"verified,omitempty"
-	Verified bool `protobuf:"varint,11,opt,name=verified,proto3" json:"verified,omitempty"`
+	Verified bool `protobuf:"varint,11,opt,name=verified,proto3" json:"verified,omitempty" dynamodbav:"verified,omitempty"`
 	// @gotags: dynamodbav:"avatar,omitempty"
-	Avatar string `protobuf:"bytes,12,opt,name=avatar,proto3" json:"avatar,omitempty"`
+	Avatar string `protobuf:"bytes,12,opt,name=avatar,proto3" json:"avatar,omitempty" dynamodbav:"avatar,omitempty"`
 	// @gotags: dynamodbav:"lastResetSentAt,omitempty"
-	LastResetSentAt string `protobuf:"bytes,13,opt,name=lastResetSentAt,proto3" json:"lastResetSentAt,omitempty"`
+	LastResetSentAt string `protobuf:"bytes,13,opt,name=lastResetSentAt,proto3" json:"lastResetSentAt,omitempty" dynamodbav:"lastResetSentAt,omitempty"`
 	// @gotags: dynamodbav:"lastVerificationSentAt,omitempty"
-	LastVerificationSentAt string `protobuf:"bytes,14,opt,name=lastVerificationSentAt,proto3" json:"lastVerificationSentAt,omitempty"`
+	LastVerificationSentAt string `protobuf:"bytes,14,opt,name=lastVerificationSentAt,proto3" json:"lastVerificationSentAt,omitempty" dynamodbav:"lastVerificationSentAt,omitempty"`
 	// @gotags: dynamodbav:"passwordHash,omitempty"
-	PasswordHash string `protobuf:"bytes,15,opt,name=passwordHash,proto3" json:"passwordHash,omitempty"`
+	PasswordHash string `protobuf:"bytes,15,opt,name=passwordHash,proto3" json:"passwordHash,omitempty" dynamodbav:"passwordHash,omitempty"`
 	// @gotags: dynamodbav:"tokenKey,omitempty"
-	TokenKey string `protobuf:"bytes,16,opt,name=tokenKey,proto3" json:"tokenKey,omitempty"`
+	TokenKey string `protobuf:"bytes,16,opt,name=tokenKey,proto3" json:"tokenKey,omitempty" dynamodbav:"tokenKey,omitempty"`
 	// @gotags: dynamodbav:"token,omitempty"
-	Token string `protobuf:"bytes,17,opt,name=token,proto3" json:"token,omitempty"`
+	Token string `protobuf:"bytes,17,opt,name=token,proto3" json:"token,omitempty" dynamodbav:"token,omitempty"`
 	// @gotags: dynamodbav:"email,omitempty"
-	Email string `protobuf:"bytes,18,opt,name=email,proto3" json:"email,omitempty"`
+	Email string `protobuf:"bytes,18,opt,name=email,proto3" json:"email,omitempty" dynamodbav:"email,omitempty"`
 }
 
 func (x *User) Reset() {
@@ -338,11 +338,11 @@ type FrontEndUser struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"name,omitempty"
-	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty" dynamodbav:"name,omitempty"`
 	// @gotags: dynamodbav:"email,omitempty"
-	Email string `protobuf:"bytes,2,opt,name=email,proto3" json:"email,omitempty"`
+	Email string `protobuf:"bytes,2,opt,name=email,proto3" json:"email,omitempty" dynamodbav:"email,omitempty"`
 	// @gotags: dynamodbav:"role,omitempty"
-	Role Role `protobuf:"varint,3,opt,name=role,proto3,enum=v1.Role" json:"role,omitempty"`
+	Role Role `protobuf:"varint,3,opt,name=role,proto3,enum=v1.Role" json:"role,omitempty" dynamodbav:"role,omitempty"`
 }
 
 func (x *FrontEndUser) Reset() {

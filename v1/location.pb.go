@@ -27,19 +27,19 @@ type Location struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"id,omitempty"
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty" dynamodbav:"id,omitempty"`
 	// @gotags: dynamodbav:"companyName,omitempty"
-	CompanyName string `protobuf:"bytes,2,opt,name=companyName,proto3" json:"companyName,omitempty"`
+	CompanyName string `protobuf:"bytes,2,opt,name=companyName,proto3" json:"companyName,omitempty" dynamodbav:"companyName,omitempty"`
 	// @gotags: dynamodbav:"address,omitempty"
-	Address *Address `protobuf:"bytes,3,opt,name=address,proto3" json:"address,omitempty"`
+	Address *Address `protobuf:"bytes,3,opt,name=address,proto3" json:"address,omitempty" dynamodbav:"address,omitempty"`
 	// @gotags: dynamodbav:"contact,omitempty"
-	Contact *Contact `protobuf:"bytes,4,opt,name=contact,proto3" json:"contact,omitempty"`
+	Contact *Contact `protobuf:"bytes,4,opt,name=contact,proto3" json:"contact,omitempty" dynamodbav:"contact,omitempty"`
 	// @gotags: dynamodbav:"businessHours,omitempty",
-	BusinessHours *BusinessHours `protobuf:"bytes,5,opt,name=businessHours,proto3" json:"businessHours,omitempty"`
+	BusinessHours *BusinessHours `protobuf:"bytes,5,opt,name=businessHours,proto3" json:"businessHours,omitempty" dynamodbav:"businessHours,omitempty"`
 	// @gotags: dynamodbav:"businessId,omitempty"
-	BusinessId string `protobuf:"bytes,11,opt,name=businessId,proto3" json:"businessId,omitempty"`
+	BusinessId string `protobuf:"bytes,11,opt,name=businessId,proto3" json:"businessId,omitempty" dynamodbav:"businessId,omitempty"`
 	// @gotags: dynamodbav:"type,omitempty"
-	Type string `protobuf:"bytes,12,opt,name=type,proto3" json:"type,omitempty"`
+	Type string `protobuf:"bytes,12,opt,name=type,proto3" json:"type,omitempty" dynamodbav:"type,omitempty"`
 }
 
 func (x *Location) Reset() {
@@ -129,7 +129,7 @@ type Locations struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"locations,omitempty"
-	Locations []*Location `protobuf:"bytes,1,rep,name=Locations,proto3" json:"Locations,omitempty"`
+	Locations []*Location `protobuf:"bytes,1,rep,name=Locations,proto3" json:"Locations,omitempty" dynamodbav:"locations,omitempty"`
 }
 
 func (x *Locations) Reset() {

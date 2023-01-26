@@ -91,11 +91,11 @@ type UpdateUserRole struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"token,omitempty"
-	Token string `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
+	Token string `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty" dynamodbav:"token,omitempty"`
 	// @gotags: dynamodbav:"newRole,omitempty"
-	NewRole []Role `protobuf:"varint,2,rep,packed,name=newRole,proto3,enum=v1.Role" json:"newRole,omitempty"`
+	NewRole []Role `protobuf:"varint,2,rep,packed,name=newRole,proto3,enum=v1.Role" json:"newRole,omitempty" dynamodbav:"newRole,omitempty"`
 	// @gotags: dynamodbav:"staffEmail,omitempty"
-	StaffEmail string `protobuf:"bytes,3,opt,name=staffEmail,proto3" json:"staffEmail,omitempty"`
+	StaffEmail string `protobuf:"bytes,3,opt,name=staffEmail,proto3" json:"staffEmail,omitempty" dynamodbav:"staffEmail,omitempty"`
 }
 
 func (x *UpdateUserRole) Reset() {

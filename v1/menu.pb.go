@@ -26,7 +26,7 @@ type CreateMenuData struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"cousineType"
-	CousineType string `protobuf:"bytes,1,opt,name=cousineType,proto3" json:"cousineType,omitempty"`
+	CousineType string `protobuf:"bytes,1,opt,name=cousineType,proto3" json:"cousineType,omitempty" dynamodbav:"cousineType"`
 }
 
 func (x *CreateMenuData) Reset() {
@@ -74,9 +74,9 @@ type MenuResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"message"
-	Message string `protobuf:"bytes,1,opt,name=message,proto3" json:"message,omitempty"`
+	Message string `protobuf:"bytes,1,opt,name=message,proto3" json:"message,omitempty" dynamodbav:"message"`
 	// @gotags: dynamodbav:"success"
-	Success bool `protobuf:"varint,2,opt,name=success,proto3" json:"success,omitempty"`
+	Success bool `protobuf:"varint,2,opt,name=success,proto3" json:"success,omitempty" dynamodbav:"success"`
 }
 
 func (x *MenuResponse) Reset() {

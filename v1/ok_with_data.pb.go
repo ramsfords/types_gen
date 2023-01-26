@@ -27,13 +27,13 @@ type OkWithData struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"success"
-	Success bool `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
+	Success bool `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty" dynamodbav:"success"`
 	// @gotags: dynamodbav:"statusCode"
-	StatusCode int32 `protobuf:"varint,2,opt,name=statusCode,proto3" json:"statusCode,omitempty"`
+	StatusCode int32 `protobuf:"varint,2,opt,name=statusCode,proto3" json:"statusCode,omitempty" dynamodbav:"statusCode"`
 	// @gotags: dynamodbav:"message"
-	Message string `protobuf:"bytes,3,opt,name=message,proto3" json:"message,omitempty"`
+	Message string `protobuf:"bytes,3,opt,name=message,proto3" json:"message,omitempty" dynamodbav:"message"`
 	// @gotags: dynamodbav:"data"
-	Data *Any `protobuf:"bytes,4,opt,name=data,proto3" json:"data,omitempty"`
+	Data *Any `protobuf:"bytes,4,opt,name=data,proto3" json:"data,omitempty" dynamodbav:"data"`
 }
 
 func (x *OkWithData) Reset() {
@@ -130,10 +130,10 @@ type Any struct {
 	// used with implementation specific semantics.
 	//
 	// @gotags: dynamodbav:"type_url"
-	TypeUrl string `protobuf:"bytes,1,opt,name=type_url,json=typeUrl,proto3" json:"type_url,omitempty"`
+	TypeUrl string `protobuf:"bytes,1,opt,name=type_url,json=typeUrl,proto3" json:"type_url,omitempty" dynamodbav:"type_url"`
 	// Must be a valid serialized protocol buffer of the above specified type.
 	// @gotags: dynamodbav:"value"
-	Value []byte `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
+	Value []byte `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty" dynamodbav:"value"`
 }
 
 func (x *Any) Reset() {

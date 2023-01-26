@@ -26,11 +26,11 @@ type UserHome struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamodbav:"userId,omitempty"
-	UserId string `protobuf:"bytes,1,opt,name=userId,proto3" json:"userId,omitempty"`
+	UserId string `protobuf:"bytes,1,opt,name=userId,proto3" json:"userId,omitempty" dynamodbav:"userId,omitempty"`
 	// @gotags: dynamodbav:"userEmail,omitempty"
-	UserEmail string `protobuf:"bytes,2,opt,name=userEmail,proto3" json:"userEmail,omitempty"`
+	UserEmail string `protobuf:"bytes,2,opt,name=userEmail,proto3" json:"userEmail,omitempty" dynamodbav:"userEmail,omitempty"`
 	// @gotags: dynamodbav:"businessId,omitempty"
-	BusinessId string `protobuf:"bytes,3,opt,name=businessId,proto3" json:"businessId,omitempty"`
+	BusinessId string `protobuf:"bytes,3,opt,name=businessId,proto3" json:"businessId,omitempty" dynamodbav:"businessId,omitempty"`
 }
 
 func (x *UserHome) Reset() {

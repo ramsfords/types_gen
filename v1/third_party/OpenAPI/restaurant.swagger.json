@@ -125,9 +125,9 @@
         "STAFF",
         "CASHIER",
         "MANAGER",
-        "SYSTEM_ADMIN",
-        "SYSTEM_STAFF",
-        "SYSTEM_MANAGER"
+        "SYSTEMADMIN",
+        "SYSTEMSTAFF",
+        "SYSTEMMANAGER"
       ],
       "default": "ADMIN"
     }

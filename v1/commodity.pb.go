@@ -348,7 +348,7 @@ func (x *Commodity) GetPackageType() PackageType {
 	if x != nil {
 		return x.PackageType
 	}
-	return PackageType_PACKAGE_NONE
+	return PackageType_PACKAGENONE
 }
 
 func (x *Commodity) GetQuantity() int32 {
@@ -362,7 +362,7 @@ func (x *Commodity) GetFreightClass() FreightClass {
 	if x != nil {
 		return x.FreightClass
 	}
-	return FreightClass_CLASS_NONE
+	return FreightClass_CLASSNONE
 }
 
 func (x *Commodity) GetCommodityInstructions() string {

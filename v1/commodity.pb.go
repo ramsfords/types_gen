@@ -362,7 +362,7 @@ func (x *Commodity) GetFreightClass() FreightClass {
 	if x != nil {
 		return x.FreightClass
 	}
-	return FreightClass_CLASSNONE
+	return FreightClass_ClASSNONE
 }
 
 func (x *Commodity) GetCommodityInstructions() string {

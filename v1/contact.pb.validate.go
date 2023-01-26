@@ -56,13 +56,9 @@ func (m *Contact) validate(all bool) error {
 
 	var errors []error
 
-	// no validation rules for FirstName
-
-	// no validation rules for LastName
+	// no validation rules for Name
 
 	// no validation rules for PhoneNumber
-
-	// no validation rules for PhoneNumberExtension
 
 	// no validation rules for EmailAddress
 

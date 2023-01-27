@@ -232,6 +232,14 @@ func (m *Business) validate(all bool) error {
 		}
 	}
 
+	// no validation rules for AllowBooking
+
+	// no validation rules for BookingLimit
+
+	// no validation rules for Disabled
+
+	// no validation rules for ReferredBy
+
 	if len(errors) > 0 {
 		return BusinessMultiError(errors)
 	}

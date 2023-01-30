@@ -119,6 +119,8 @@ func (m *Bid) validate(all bool) error {
 
 	// no validation rules for Origin
 
+	// no validation rules for OpportunityId
+
 	if len(errors) > 0 {
 		return BidMultiError(errors)
 	}

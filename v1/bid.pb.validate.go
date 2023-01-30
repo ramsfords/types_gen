@@ -121,6 +121,14 @@ func (m *Bid) validate(all bool) error {
 
 	// no validation rules for OpportunityId
 
+	// no validation rules for ServiceLevelCode
+
+	// no validation rules for ServiceName
+
+	// no validation rules for ServiceType
+
+	// no validation rules for ShipmentId
+
 	if len(errors) > 0 {
 		return BidMultiError(errors)
 	}

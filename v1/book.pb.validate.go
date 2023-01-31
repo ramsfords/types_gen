@@ -57,46 +57,12 @@ func (m *BookingResponse) validate(all bool) error {
 
 	var errors []error
 
-	for idx, item := range m.GetCommodities() {
-		_, _ = idx, item
-
-		if all {
-			switch v := interface{}(item).(type) {
-			case interface{ ValidateAll() error }:
-				if err := v.ValidateAll(); err != nil {
-					errors = append(errors, BookingResponseValidationError{
-						field:  fmt.Sprintf("Commodities[%v]", idx),
-						reason: "embedded message failed validation",
-						cause:  err,
-					})
-				}
-			case interface{ Validate() error }:
-				if err := v.Validate(); err != nil {
-					errors = append(errors, BookingResponseValidationError{
-						field:  fmt.Sprintf("Commodities[%v]", idx),
-						reason: "embedded message failed validation",
-						cause:  err,
-					})
-				}
-			}
-		} else if v, ok := interface{}(item).(interface{ Validate() error }); ok {
-			if err := v.Validate(); err != nil {
-				return BookingResponseValidationError{
-					field:  fmt.Sprintf("Commodities[%v]", idx),
-					reason: "embedded message failed validation",
-					cause:  err,
-				}
-			}
-		}
-
-	}
-
 	if all {
-		switch v := interface{}(m.GetPickup()).(type) {
+		switch v := interface{}(m.GetQuoteRequest()).(type) {
 		case interface{ ValidateAll() error }:
 			if err := v.ValidateAll(); err != nil {
 				errors = append(errors, BookingResponseValidationError{
-					field:  "Pickup",
+					field:  "QuoteRequest",
 					reason: "embedded message failed validation",
 					cause:  err,
 				})
@@ -104,105 +70,16 @@ func (m *BookingResponse) validate(all bool) error {
 		case interface{ Validate() error }:
 			if err := v.Validate(); err != nil {
 				errors = append(errors, BookingResponseValidationError{
-					field:  "Pickup",
+					field:  "QuoteRequest",
 					reason: "embedded message failed validation",
 					cause:  err,
 				})
 			}
 		}
-	} else if v, ok := interface{}(m.GetPickup()).(interface{ Validate() error }); ok {
+	} else if v, ok := interface{}(m.GetQuoteRequest()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return BookingResponseValidationError{
-				field:  "Pickup",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
-
-	if all {
-		switch v := interface{}(m.GetDelivery()).(type) {
-		case interface{ ValidateAll() error }:
-			if err := v.ValidateAll(); err != nil {
-				errors = append(errors, BookingResponseValidationError{
-					field:  "Delivery",
-					reason: "embedded message failed validation",
-					cause:  err,
-				})
-			}
-		case interface{ Validate() error }:
-			if err := v.Validate(); err != nil {
-				errors = append(errors, BookingResponseValidationError{
-					field:  "Delivery",
-					reason: "embedded message failed validation",
-					cause:  err,
-				})
-			}
-		}
-	} else if v, ok := interface{}(m.GetDelivery()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return BookingResponseValidationError{
-				field:  "Delivery",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
-
-	if all {
-		switch v := interface{}(m.GetBid()).(type) {
-		case interface{ ValidateAll() error }:
-			if err := v.ValidateAll(); err != nil {
-				errors = append(errors, BookingResponseValidationError{
-					field:  "Bid",
-					reason: "embedded message failed validation",
-					cause:  err,
-				})
-			}
-		case interface{ Validate() error }:
-			if err := v.Validate(); err != nil {
-				errors = append(errors, BookingResponseValidationError{
-					field:  "Bid",
-					reason: "embedded message failed validation",
-					cause:  err,
-				})
-			}
-		}
-	} else if v, ok := interface{}(m.GetBid()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return BookingResponseValidationError{
-				field:  "Bid",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
-
-	// no validation rules for BookingSuccess
-
-	if all {
-		switch v := interface{}(m.GetDispatchResponse()).(type) {
-		case interface{ ValidateAll() error }:
-			if err := v.ValidateAll(); err != nil {
-				errors = append(errors, BookingResponseValidationError{
-					field:  "DispatchResponse",
-					reason: "embedded message failed validation",
-					cause:  err,
-				})
-			}
-		case interface{ Validate() error }:
-			if err := v.Validate(); err != nil {
-				errors = append(errors, BookingResponseValidationError{
-					field:  "DispatchResponse",
-					reason: "embedded message failed validation",
-					cause:  err,
-				})
-			}
-		}
-	} else if v, ok := interface{}(m.GetDispatchResponse()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return BookingResponseValidationError{
-				field:  "DispatchResponse",
+				field:  "QuoteRequest",
 				reason: "embedded message failed validation",
 				cause:  err,
 			}
@@ -238,13 +115,36 @@ func (m *BookingResponse) validate(all bool) error {
 		}
 	}
 
-	// no validation rules for BusinessId
-
-	// no validation rules for QuoteId
-
 	// no validation rules for SvgData
 
-	// no validation rules for BolUrl
+	if all {
+		switch v := interface{}(m.GetBid()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, BookingResponseValidationError{
+					field:  "Bid",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, BookingResponseValidationError{
+					field:  "Bid",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetBid()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return BookingResponseValidationError{
+				field:  "Bid",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
 
 	if len(errors) > 0 {
 		return BookingResponseMultiError(errors)
@@ -346,25 +246,31 @@ func (m *BookingInfo) validate(all bool) error {
 
 	var errors []error
 
+	// no validation rules for ShipmentId
+
 	// no validation rules for FirstShipperBolNumber
 
 	// no validation rules for FreightTerm
 
-	// no validation rules for SpecialInstructions
-
 	// no validation rules for CarrierName
+
+	// no validation rules for CarrierPhone
+
+	// no validation rules for CarrierEmail
 
 	// no validation rules for CarrierProNumber
 
 	// no validation rules for CarrierLogoUrl
 
-	// no validation rules for CarrierDispatchContactNumber
-
-	// no validation rules for CarrierDispatchEmail
-
 	// no validation rules for CarrierBolNumber
 
 	// no validation rules for CarrierReference
+
+	// no validation rules for PickupNumber
+
+	// no validation rules for ServiceType
+
+	// no validation rules for BolUrl
 
 	if len(errors) > 0 {
 		return BookingInfoMultiError(errors)

@@ -400,9 +400,27 @@ func (m *FrontEndUser) validate(all bool) error {
 
 	// no validation rules for Name
 
-	// no validation rules for Email
+	// no validation rules for UserName
 
-	// no validation rules for Role
+	// no validation rules for Origin
+
+	// no validation rules for Type
+
+	// no validation rules for Id
+
+	// no validation rules for Created
+
+	// no validation rules for Updated
+
+	// no validation rules for Verified
+
+	// no validation rules for Avatar
+
+	// no validation rules for TokenKey
+
+	// no validation rules for Token
+
+	// no validation rules for Email
 
 	if len(errors) > 0 {
 		return FrontEndUserMultiError(errors)

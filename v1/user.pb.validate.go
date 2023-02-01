@@ -408,10 +408,6 @@ func (m *FrontEndUser) validate(all bool) error {
 
 	// no validation rules for Id
 
-	// no validation rules for Created
-
-	// no validation rules for Updated
-
 	// no validation rules for Verified
 
 	// no validation rules for Avatar

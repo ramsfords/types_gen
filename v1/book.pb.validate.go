@@ -272,6 +272,8 @@ func (m *BookingInfo) validate(all bool) error {
 
 	// no validation rules for BolUrl
 
+	// no validation rules for SvgData
+
 	if len(errors) > 0 {
 		return BookingInfoMultiError(errors)
 	}

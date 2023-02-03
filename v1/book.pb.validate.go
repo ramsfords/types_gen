@@ -516,7 +516,7 @@ func (m *DispatchResponse) validate(all bool) error {
 
 	// no validation rules for CarrierPhone
 
-	// no validation rules for CarrierPRONumber
+	// no validation rules for CarrierProNumber
 
 	// no validation rules for HandlingUnitTotal
 

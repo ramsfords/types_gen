@@ -35,21 +35,22 @@ var (
 	_ = sort.Sort
 )
 
-// Validate checks the field values on Status with the rules defined in the
+// Validate checks the field values on UserStatus with the rules defined in the
 // proto definition for this message. If any rules are violated, the first
 // error encountered is returned, or nil if there are no violations.
-func (m *Status) Validate() error {
+func (m *UserStatus) Validate() error {
 	return m.validate(false)
 }
 
-// ValidateAll checks the field values on Status with the rules defined in the
-// proto definition for this message. If any rules are violated, the result is
-// a list of violation errors wrapped in StatusMultiError, or nil if none found.
-func (m *Status) ValidateAll() error {
+// ValidateAll checks the field values on UserStatus with the rules defined in
+// the proto definition for this message. If any rules are violated, the
+// result is a list of violation errors wrapped in UserStatusMultiError, or
+// nil if none found.
+func (m *UserStatus) ValidateAll() error {
 	return m.validate(true)
 }
 
-func (m *Status) validate(all bool) error {
+func (m *UserStatus) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
@@ -61,18 +62,18 @@ func (m *Status) validate(all bool) error {
 	// no validation rules for Since
 
 	if len(errors) > 0 {
-		return StatusMultiError(errors)
+		return UserStatusMultiError(errors)
 	}
 
 	return nil
 }
 
-// StatusMultiError is an error wrapping multiple validation errors returned by
-// Status.ValidateAll() if the designated constraints aren't met.
-type StatusMultiError []error
+// UserStatusMultiError is an error wrapping multiple validation errors
+// returned by UserStatus.ValidateAll() if the designated constraints aren't met.
+type UserStatusMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
-func (m StatusMultiError) Error() string {
+func (m UserStatusMultiError) Error() string {
 	var msgs []string
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
@@ -81,11 +82,11 @@ func (m StatusMultiError) Error() string {
 }
 
 // AllErrors returns a list of validation violation errors.
-func (m StatusMultiError) AllErrors() []error { return m }
+func (m UserStatusMultiError) AllErrors() []error { return m }
 
-// StatusValidationError is the validation error returned by Status.Validate if
-// the designated constraints aren't met.
-type StatusValidationError struct {
+// UserStatusValidationError is the validation error returned by
+// UserStatus.Validate if the designated constraints aren't met.
+type UserStatusValidationError struct {
 	field  string
 	reason string
 	cause  error
@@ -93,22 +94,22 @@ type StatusValidationError struct {
 }
 
 // Field function returns field value.
-func (e StatusValidationError) Field() string { return e.field }
+func (e UserStatusValidationError) Field() string { return e.field }
 
 // Reason function returns reason value.
-func (e StatusValidationError) Reason() string { return e.reason }
+func (e UserStatusValidationError) Reason() string { return e.reason }
 
 // Cause function returns cause value.
-func (e StatusValidationError) Cause() error { return e.cause }
+func (e UserStatusValidationError) Cause() error { return e.cause }
 
 // Key function returns key value.
-func (e StatusValidationError) Key() bool { return e.key }
+func (e UserStatusValidationError) Key() bool { return e.key }
 
 // ErrorName returns error name.
-func (e StatusValidationError) ErrorName() string { return "StatusValidationError" }
+func (e UserStatusValidationError) ErrorName() string { return "UserStatusValidationError" }
 
 // Error satisfies the builtin error interface
-func (e StatusValidationError) Error() string {
+func (e UserStatusValidationError) Error() string {
 	cause := ""
 	if e.cause != nil {
 		cause = fmt.Sprintf(" | caused by: %v", e.cause)
@@ -120,14 +121,14 @@ func (e StatusValidationError) Error() string {
 	}
 
 	return fmt.Sprintf(
-		"invalid %sStatus.%s: %s%s",
+		"invalid %sUserStatus.%s: %s%s",
 		key,
 		e.field,
 		e.reason,
 		cause)
 }
 
-var _ error = StatusValidationError{}
+var _ error = UserStatusValidationError{}
 
 var _ interface {
 	Field() string
@@ -135,4 +136,4 @@ var _ interface {
 	Key() bool
 	Cause() error
 	ErrorName() string
-} = StatusValidationError{}
+} = UserStatusValidationError{}

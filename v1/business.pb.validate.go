@@ -240,6 +240,10 @@ func (m *Business) validate(all bool) error {
 
 	// no validation rules for ReferredBy
 
+	// no validation rules for AccountCreditLimit
+
+	// no validation rules for PriceTier
+
 	if len(errors) > 0 {
 		return BusinessMultiError(errors)
 	}

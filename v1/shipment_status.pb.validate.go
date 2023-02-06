@@ -35,21 +35,22 @@ var (
 	_ = sort.Sort
 )
 
-// Validate checks the field values on Status with the rules defined in the
-// proto definition for this message. If any rules are violated, the first
-// error encountered is returned, or nil if there are no violations.
-func (m *Status) Validate() error {
+// Validate checks the field values on ShipmentStatusData with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the first error encountered is returned, or nil if there are no violations.
+func (m *ShipmentStatusData) Validate() error {
 	return m.validate(false)
 }
 
-// ValidateAll checks the field values on Status with the rules defined in the
-// proto definition for this message. If any rules are violated, the result is
-// a list of violation errors wrapped in StatusMultiError, or nil if none found.
-func (m *Status) ValidateAll() error {
+// ValidateAll checks the field values on ShipmentStatusData with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// ShipmentStatusDataMultiError, or nil if none found.
+func (m *ShipmentStatusData) ValidateAll() error {
 	return m.validate(true)
 }
 
-func (m *Status) validate(all bool) error {
+func (m *ShipmentStatusData) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
@@ -58,25 +59,26 @@ func (m *Status) validate(all bool) error {
 
 	// no validation rules for Date
 
-	// no validation rules for Status
+	// no validation rules for ShipmentStatusOption
 
 	// no validation rules for Comment
 
 	// no validation rules for CurrentLocation
 
 	if len(errors) > 0 {
-		return StatusMultiError(errors)
+		return ShipmentStatusDataMultiError(errors)
 	}
 
 	return nil
 }
 
-// StatusMultiError is an error wrapping multiple validation errors returned by
-// Status.ValidateAll() if the designated constraints aren't met.
-type StatusMultiError []error
+// ShipmentStatusDataMultiError is an error wrapping multiple validation errors
+// returned by ShipmentStatusData.ValidateAll() if the designated constraints
+// aren't met.
+type ShipmentStatusDataMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
-func (m StatusMultiError) Error() string {
+func (m ShipmentStatusDataMultiError) Error() string {
 	var msgs []string
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
@@ -85,11 +87,11 @@ func (m StatusMultiError) Error() string {
 }
 
 // AllErrors returns a list of validation violation errors.
-func (m StatusMultiError) AllErrors() []error { return m }
+func (m ShipmentStatusDataMultiError) AllErrors() []error { return m }
 
-// StatusValidationError is the validation error returned by Status.Validate if
-// the designated constraints aren't met.
-type StatusValidationError struct {
+// ShipmentStatusDataValidationError is the validation error returned by
+// ShipmentStatusData.Validate if the designated constraints aren't met.
+type ShipmentStatusDataValidationError struct {
 	field  string
 	reason string
 	cause  error
@@ -97,22 +99,24 @@ type StatusValidationError struct {
 }
 
 // Field function returns field value.
-func (e StatusValidationError) Field() string { return e.field }
+func (e ShipmentStatusDataValidationError) Field() string { return e.field }
 
 // Reason function returns reason value.
-func (e StatusValidationError) Reason() string { return e.reason }
+func (e ShipmentStatusDataValidationError) Reason() string { return e.reason }
 
 // Cause function returns cause value.
-func (e StatusValidationError) Cause() error { return e.cause }
+func (e ShipmentStatusDataValidationError) Cause() error { return e.cause }
 
 // Key function returns key value.
-func (e StatusValidationError) Key() bool { return e.key }
+func (e ShipmentStatusDataValidationError) Key() bool { return e.key }
 
 // ErrorName returns error name.
-func (e StatusValidationError) ErrorName() string { return "StatusValidationError" }
+func (e ShipmentStatusDataValidationError) ErrorName() string {
+	return "ShipmentStatusDataValidationError"
+}
 
 // Error satisfies the builtin error interface
-func (e StatusValidationError) Error() string {
+func (e ShipmentStatusDataValidationError) Error() string {
 	cause := ""
 	if e.cause != nil {
 		cause = fmt.Sprintf(" | caused by: %v", e.cause)
@@ -124,14 +128,14 @@ func (e StatusValidationError) Error() string {
 	}
 
 	return fmt.Sprintf(
-		"invalid %sStatus.%s: %s%s",
+		"invalid %sShipmentStatusData.%s: %s%s",
 		key,
 		e.field,
 		e.reason,
 		cause)
 }
 
-var _ error = StatusValidationError{}
+var _ error = ShipmentStatusDataValidationError{}
 
 var _ interface {
 	Field() string
@@ -139,24 +143,24 @@ var _ interface {
 	Key() bool
 	Cause() error
 	ErrorName() string
-} = StatusValidationError{}
+} = ShipmentStatusDataValidationError{}
 
-// Validate checks the field values on ShipmentStatus with the rules defined in
-// the proto definition for this message. If any rules are violated, the first
-// error encountered is returned, or nil if there are no violations.
-func (m *ShipmentStatus) Validate() error {
+// Validate checks the field values on ShipmentTracking with the rules defined
+// in the proto definition for this message. If any rules are violated, the
+// first error encountered is returned, or nil if there are no violations.
+func (m *ShipmentTracking) Validate() error {
 	return m.validate(false)
 }
 
-// ValidateAll checks the field values on ShipmentStatus with the rules defined
-// in the proto definition for this message. If any rules are violated, the
-// result is a list of violation errors wrapped in ShipmentStatusMultiError,
-// or nil if none found.
-func (m *ShipmentStatus) ValidateAll() error {
+// ValidateAll checks the field values on ShipmentTracking with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// ShipmentTrackingMultiError, or nil if none found.
+func (m *ShipmentTracking) ValidateAll() error {
 	return m.validate(true)
 }
 
-func (m *ShipmentStatus) validate(all bool) error {
+func (m *ShipmentTracking) validate(all bool) error {
 	if m == nil {
 		return nil
 	}
@@ -171,23 +175,23 @@ func (m *ShipmentStatus) validate(all bool) error {
 
 	// no validation rules for ReceiverId
 
-	for idx, item := range m.GetStatus() {
+	for idx, item := range m.GetShipmentStatusDatas() {
 		_, _ = idx, item
 
 		if all {
 			switch v := interface{}(item).(type) {
 			case interface{ ValidateAll() error }:
 				if err := v.ValidateAll(); err != nil {
-					errors = append(errors, ShipmentStatusValidationError{
-						field:  fmt.Sprintf("Status[%v]", idx),
+					errors = append(errors, ShipmentTrackingValidationError{
+						field:  fmt.Sprintf("ShipmentStatusDatas[%v]", idx),
 						reason: "embedded message failed validation",
 						cause:  err,
 					})
 				}
 			case interface{ Validate() error }:
 				if err := v.Validate(); err != nil {
-					errors = append(errors, ShipmentStatusValidationError{
-						field:  fmt.Sprintf("Status[%v]", idx),
+					errors = append(errors, ShipmentTrackingValidationError{
+						field:  fmt.Sprintf("ShipmentStatusDatas[%v]", idx),
 						reason: "embedded message failed validation",
 						cause:  err,
 					})
@@ -195,8 +199,8 @@ func (m *ShipmentStatus) validate(all bool) error {
 			}
 		} else if v, ok := interface{}(item).(interface{ Validate() error }); ok {
 			if err := v.Validate(); err != nil {
-				return ShipmentStatusValidationError{
-					field:  fmt.Sprintf("Status[%v]", idx),
+				return ShipmentTrackingValidationError{
+					field:  fmt.Sprintf("ShipmentStatusDatas[%v]", idx),
 					reason: "embedded message failed validation",
 					cause:  err,
 				}
@@ -210,19 +214,19 @@ func (m *ShipmentStatus) validate(all bool) error {
 	// no validation rules for UpdatedAt
 
 	if len(errors) > 0 {
-		return ShipmentStatusMultiError(errors)
+		return ShipmentTrackingMultiError(errors)
 	}
 
 	return nil
 }
 
-// ShipmentStatusMultiError is an error wrapping multiple validation errors
-// returned by ShipmentStatus.ValidateAll() if the designated constraints
+// ShipmentTrackingMultiError is an error wrapping multiple validation errors
+// returned by ShipmentTracking.ValidateAll() if the designated constraints
 // aren't met.
-type ShipmentStatusMultiError []error
+type ShipmentTrackingMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
-func (m ShipmentStatusMultiError) Error() string {
+func (m ShipmentTrackingMultiError) Error() string {
 	var msgs []string
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
@@ -231,11 +235,11 @@ func (m ShipmentStatusMultiError) Error() string {
 }
 
 // AllErrors returns a list of validation violation errors.
-func (m ShipmentStatusMultiError) AllErrors() []error { return m }
+func (m ShipmentTrackingMultiError) AllErrors() []error { return m }
 
-// ShipmentStatusValidationError is the validation error returned by
-// ShipmentStatus.Validate if the designated constraints aren't met.
-type ShipmentStatusValidationError struct {
+// ShipmentTrackingValidationError is the validation error returned by
+// ShipmentTracking.Validate if the designated constraints aren't met.
+type ShipmentTrackingValidationError struct {
 	field  string
 	reason string
 	cause  error
@@ -243,22 +247,22 @@ type ShipmentStatusValidationError struct {
 }
 
 // Field function returns field value.
-func (e ShipmentStatusValidationError) Field() string { return e.field }
+func (e ShipmentTrackingValidationError) Field() string { return e.field }
 
 // Reason function returns reason value.
-func (e ShipmentStatusValidationError) Reason() string { return e.reason }
+func (e ShipmentTrackingValidationError) Reason() string { return e.reason }
 
 // Cause function returns cause value.
-func (e ShipmentStatusValidationError) Cause() error { return e.cause }
+func (e ShipmentTrackingValidationError) Cause() error { return e.cause }
 
 // Key function returns key value.
-func (e ShipmentStatusValidationError) Key() bool { return e.key }
+func (e ShipmentTrackingValidationError) Key() bool { return e.key }
 
 // ErrorName returns error name.
-func (e ShipmentStatusValidationError) ErrorName() string { return "ShipmentStatusValidationError" }
+func (e ShipmentTrackingValidationError) ErrorName() string { return "ShipmentTrackingValidationError" }
 
 // Error satisfies the builtin error interface
-func (e ShipmentStatusValidationError) Error() string {
+func (e ShipmentTrackingValidationError) Error() string {
 	cause := ""
 	if e.cause != nil {
 		cause = fmt.Sprintf(" | caused by: %v", e.cause)
@@ -270,14 +274,14 @@ func (e ShipmentStatusValidationError) Error() string {
 	}
 
 	return fmt.Sprintf(
-		"invalid %sShipmentStatus.%s: %s%s",
+		"invalid %sShipmentTracking.%s: %s%s",
 		key,
 		e.field,
 		e.reason,
 		cause)
 }
 
-var _ error = ShipmentStatusValidationError{}
+var _ error = ShipmentTrackingValidationError{}
 
 var _ interface {
 	Field() string
@@ -285,4 +289,4 @@ var _ interface {
 	Key() bool
 	Cause() error
 	ErrorName() string
-} = ShipmentStatusValidationError{}
+} = ShipmentTrackingValidationError{}

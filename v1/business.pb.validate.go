@@ -244,6 +244,8 @@ func (m *Business) validate(all bool) error {
 
 	// no validation rules for PriceTier
 
+	// no validation rules for BooksOpened
+
 	if len(errors) > 0 {
 		return BusinessMultiError(errors)
 	}

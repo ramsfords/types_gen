@@ -275,6 +275,8 @@ func (m *Business) validate(all bool) error {
 		}
 	}
 
+	// no validation rules for BooksContactId
+
 	if len(errors) > 0 {
 		return BusinessMultiError(errors)
 	}

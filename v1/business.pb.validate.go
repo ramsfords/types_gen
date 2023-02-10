@@ -246,6 +246,8 @@ func (m *Business) validate(all bool) error {
 
 	// no validation rules for BooksOpened
 
+	// no validation rules for AdminUser
+
 	if len(errors) > 0 {
 		return BusinessMultiError(errors)
 	}

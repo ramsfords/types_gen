@@ -371,6 +371,8 @@ func (m *QuoteRequest) validate(all bool) error {
 		}
 	}
 
+	// no validation rules for RequesterEmail
+
 	if len(errors) > 0 {
 		return QuoteRequestMultiError(errors)
 	}

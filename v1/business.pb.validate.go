@@ -75,9 +75,9 @@ func (m *Business) validate(all bool) error {
 
 	// no validation rules for AdminEmail
 
-	// no validation rules for CreateAt
+	// no validation rules for CreatedAt
 
-	// no validation rules for UpdatedUt
+	// no validation rules for UpdatedAt
 
 	// no validation rules for DeletedAt
 

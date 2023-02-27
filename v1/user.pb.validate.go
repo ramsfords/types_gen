@@ -94,7 +94,7 @@ func (m *User) validate(all bool) error {
 
 	// no validation rules for PhoneNumber
 
-	// no validation rules for OrgId
+	// no validation rules for OrganizationId
 
 	if len(errors) > 0 {
 		return UserMultiError(errors)
